@@ -1,0 +1,37 @@
+// menu knop
+.menu-knop {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    .menu-lijn {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        transition: all 0.3s ease-out;
+    }
+
+    // menu roteren naar een x
+    &.close {
+    transform: rotate(180deg);
+
+    .menu-lijn {
+        // lijn 1 draaien
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        // lijn 2 verbergen
+        &:nth-child(2) {
+            opacity: 0;;
+        }
+        // lijn 3 draaien
+        &:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+}
+}

@@ -73,6 +73,26 @@
       color: red;
       transition: all 0.3s ease-out; }
 
+@media screen and (max-width: 768px) {
+  ul.menu-navigatie, div.menu-persoonlijk {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-navigatie.show, div.menu-persoonlijk.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-navigatie {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-persoonlijk {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-persoonlijk .foto {
+      width: 150px;
+      height: 150px; }
+  .nav-item {
+    margin: 1rem; } }
+
 * {
   box-sizing: border-box; }
 
@@ -89,7 +109,9 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 300; }
   h1.heading1, h2.heading1, h3.heading1 {
-    font-size: 6rem; }
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 1rem; }
 
 a {
   color: #fff;

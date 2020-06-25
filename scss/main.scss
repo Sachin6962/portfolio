@@ -1,19 +1,22 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: url(../img/toetsenbord.jpg);
-    background-attachment: fixed;
-    background-size: cover;
+    background: #131313;
     color: #fff;
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#home-achtergrond {
+    background: url(../img/toetsenbord.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 // headings
@@ -26,6 +29,10 @@ h1, h2, h3 {
         line-height: 1;
         margin-bottom: 1rem;
     }
+}
+
+h2 {
+    padding: 0.2rem;
 }
 
 a {
@@ -67,3 +74,8 @@ main {
         }
     }
 }
+
+// over mij pagina
+
+
+@import 'mobile';

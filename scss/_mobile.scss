@@ -29,4 +29,20 @@
     .nav-item {
         margin: 1rem;
     }
+
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 15vh;
+            font-size: 4rem;
+        }
+    }
+
+    // over mij pagina
+    &#over-mij {
+        overflow: hidden;
+        h1 {
+            font-size: 4rem;
+        }
+    }
 }

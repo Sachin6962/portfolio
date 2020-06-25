@@ -20,6 +20,59 @@
     .menu-knop.close .menu-lijn:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-persoonlijk, .menu-navigatie {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-navigatie {
+    margin: 0;
+    padding: 0;
+    background: rgba(18, 18, 18, 0.9);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.1s ease-out; }
+    .menu-navigatie.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-persoonlijk {
+    background: rgba(31, 31, 31, 0.9);
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.1s ease-out; }
+    .menu-persoonlijk.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-persoonlijk .foto {
+      width: 250px;
+      height: 250px;
+      background: url("../img/foto1.2.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 3px red; }
+  .menu .nav-item.huidige-pagina > a {
+    color: red; }
+  .menu .nav-item .link {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem, 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s ease-out; }
+    .menu .nav-item .link:hover {
+      color: red;
+      transition: all 0.3s ease-out; }
+
 * {
   box-sizing: border-box; }
 
@@ -34,7 +87,7 @@ body {
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 300; }
   h1.heading1, h2.heading1, h3.heading1 {
     font-size: 6rem; }
 

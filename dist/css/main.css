@@ -112,7 +112,7 @@ header {
   color: red; }
 
 main {
-  padding: 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   height: 100%; }
   main .icons {
     margin-top: 1rem; }
@@ -125,6 +125,50 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.spacing {
+  letter-spacing: 5px; }
+
+.bio {
+  display: flex;
+  margin: 50px auto 0 0;
+  justify-content: center;
+  max-width: 1000px; }
+  .bio .item1 {
+    max-height: 400px;
+    flex: 0 0 auto;
+    border: 3px solid red;
+    margin: 10px; }
+  .bio .item2 {
+    margin: 10px;
+    font-size: 19px;
+    font-weight: 300; }
+    .bio .item2 p {
+      padding: 4px; }
+
+.schuine-container {
+  width: 100%;
+  background: #1d1d1d;
+  padding: 0 4rem;
+  transform: skew(0, -2deg); }
+  .schuine-container h2 {
+    padding-top: 40px;
+    transform: skew(0, 2deg); }
+  .schuine-container .vaardigheden {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    row-gap: 50px;
+    padding: 40px 20px;
+    transform: skew(0, 2deg); }
+    .schuine-container .vaardigheden .grid-item {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      text-align: center; }
+      .schuine-container .vaardigheden .grid-item:hover {
+        color: red;
+        transition: all 0.3s ease-out; }
 
 @media screen and (max-width: 768px) {
   ul.menu-navigatie, div.menu-persoonlijk {
@@ -153,4 +197,10 @@ main {
   #over-mij {
     overflow: hidden; }
     #over-mij h1 {
-      font-size: 4rem; } }
+      margin-top: 2vh;
+      font-size: 4rem; }
+    #over-mij .bio {
+      flex-direction: column;
+      align-items: center; }
+      #over-mij .bio .item1 {
+        max-width: 200px; } }

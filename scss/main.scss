@@ -51,7 +51,7 @@ header {
 }
 
 main {
-    padding: 4rem;
+    padding: 4rem 4rem 2rem 4rem;
     height: 100%;
 
     .icons {
@@ -75,7 +75,67 @@ main {
     }
 }
 
-// over mij pagina
+// over mij pagina ------------------------------------------------
+.spacing {
+    letter-spacing: 5px;
+}
+
+.bio {
+    display: flex;
+    margin: 50px auto 0 0;
+    justify-content: center;
+    max-width: 1000px;
+    
+    .item1 {
+        max-height: 400px;
+        flex: 0 0 auto;
+        border: 3px solid red;
+        margin: 10px;
+    }
+    .item2 {
+        margin: 10px;
+        font-size: 19px;
+        font-weight: 300;
+
+        p {
+            padding: 4px;
+        }
+    }
+}
+
+.schuine-container {
+    width: 100%;
+    background: rgb(29, 29, 29);
+    padding: 0 4rem;
+    transform: skew(0, -2deg);
+
+    h2 {
+        padding-top: 40px;;
+        transform: skew(0, 2deg);
+    }
+
+    .vaardigheden {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-around;
+        row-gap: 50px;
+        padding: 40px 20px;
+        transform: skew(0, 2deg);
+        
+        .grid-item {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+    
+            &:hover {
+                    color: $tweede-kleur;
+                    transition: all 0.3s ease-out;
+                }
+        }
+    }
+}
+
 
 
 @import 'mobile';

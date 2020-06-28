@@ -1,4 +1,4 @@
-// media query mobiele telefoons en tablets
+// mobiele telefoons en tablets
 @media screen and (max-width: 768px) {
     ul.menu-navigatie, div.menu-persoonlijk {
         float: none;
@@ -54,5 +54,15 @@
                 max-width: 200px;
             }
         }
+    }
+    .grid-container {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+// grotere schermen
+@media screen and (min-width: 769px) {
+    .grid-container {
+        grid-template-columns:repeat(4, 1fr);
     }
 }

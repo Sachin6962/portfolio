@@ -80,11 +80,16 @@ main {
     letter-spacing: 5px;
 }
 
+#over-mij {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
 .bio {
     display: flex;
-    margin: 50px auto 0 0;
+    margin-top: 50px;
     justify-content: center;
-    max-width: 1000px;
+
     
     .item1 {
         max-height: 400px;
@@ -105,8 +110,7 @@ main {
 
 .schuine-container {
     width: 100%;
-    background: rgb(29, 29, 29);
-    padding: 0 4rem;
+    background: rgb(31, 31, 31);
     transform: skew(0, -2deg);
 
     h2 {
@@ -115,15 +119,21 @@ main {
     }
 
     .vaardigheden {
+        padding: 0 4rem;
+        margin: 0 auto;
+        max-width: 1280px;
+    }
+
+    .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: space-around;
+        justify-content: space-between;
         row-gap: 50px;
         padding: 40px 20px;
         transform: skew(0, 2deg);
+        max-width: 1280px;
+        margin: 0 auto;
         
         .grid-item {
-            display: grid;
             align-items: center;
             justify-items: center;
             text-align: center;
@@ -133,6 +143,80 @@ main {
                     transition: all 0.3s ease-out;
                 }
         }
+    }
+
+    .werkervaring {
+        transform: skew(0, 2deg);
+
+        h2 {
+            padding: 0 4rem;
+            margin: 0 auto;
+            max-width: 1280px;
+        }
+
+        .flex-werk {
+            display: flex;
+            max-width: 1280px;
+            margin: 20px auto 0 auto;
+            padding: 0 4rem;
+
+            .flex-item {
+                position: relative;
+                flex: 0 1 50%;
+                height: 150px;
+
+                h3, p {
+                    position: absolute;
+                    top: 2rem;
+                    left: 2rem;
+                    font-weight: 300;
+                }
+                p {
+                    top: 3rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .expand-scherm {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 4rem;
+
+            div {
+                background: #131313;
+
+                p {
+                    margin: 0;
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+// footer
+.footer {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+    padding: 0 4rem;
+
+    p {
+        position: relative;
+        margin: 0;
+        top: 35px;
     }
 }
 

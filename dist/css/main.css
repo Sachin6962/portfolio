@@ -186,21 +186,22 @@ main {
       max-width: 1280px;
       margin: 20px auto 0 auto;
       padding: 0 4rem; }
-      .schuine-container .werkervaring .flex-werk .flex-item {
+      .schuine-container .werkervaring .flex-werk .flex-item1 {
         position: relative;
-        flex: 0 1 50%;
-        height: 150px; }
-        .schuine-container .werkervaring .flex-werk .flex-item h3, .schuine-container .werkervaring .flex-werk .flex-item p {
-          position: absolute;
-          top: 2rem;
-          left: 2rem;
-          font-weight: 300; }
-        .schuine-container .werkervaring .flex-werk .flex-item p {
-          top: 3rem; }
-        .schuine-container .werkervaring .flex-werk .flex-item img {
+        flex: 0 1 50%; }
+        .schuine-container .werkervaring .flex-werk .flex-item1 img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
+      .schuine-container .werkervaring .flex-werk .flex-item2 {
+        flex: 0 1 50%;
+        background: #131313;
+        transition: all 0.3s ease-out; }
+        .schuine-container .werkervaring .flex-werk .flex-item2 div {
+          margin: 0;
+          padding: 2rem; }
+        .schuine-container .werkervaring .flex-werk .flex-item2 p, .schuine-container .werkervaring .flex-werk .flex-item2 h3 {
+          font-weight: 300; }
     .schuine-container .werkervaring .expand-scherm {
       max-width: 1280px;
       margin: 0 auto;
@@ -260,7 +261,11 @@ main {
       #over-mij .bio .item1 {
         max-width: 200px; }
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .flex-werk {
+    flex-direction: column; }
+  .flex-werk:last-child {
+    flex-direction: column-reverse; } }
 
 @media screen and (min-width: 769px) {
   .grid-container {

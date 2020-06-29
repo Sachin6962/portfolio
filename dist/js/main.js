@@ -4,6 +4,10 @@ var menuNav = document.querySelector('.menu-navigatie');
 var menuPers = document.querySelector('.menu-persoonlijk');
 var navItem = document.querySelectorAll('.nav-item');
 
+var flex1 = document.querySelector('.flex-item1');
+var flex2 = document.querySelector('.flex-item2');
+let showCollaps = false;
+
 // standaard staat van menu
 let showMenu = false;
 

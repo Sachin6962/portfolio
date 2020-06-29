@@ -58,6 +58,13 @@
     .grid-container {
         grid-template-columns:repeat(2, 1fr);
     }
+
+    .flex-werk {
+        flex-direction: column;
+    }
+    .flex-werk:last-child {
+        flex-direction: column-reverse;
+    }
 }
 
 // grotere schermen

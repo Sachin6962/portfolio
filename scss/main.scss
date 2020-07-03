@@ -110,7 +110,7 @@ main {
 
 .schuine-container {
     width: 100%;
-    background: rgb(31, 31, 31);
+    background: rgb(37, 37, 37);
     transform: skew(0, -2deg);
 
     h2 {
@@ -122,6 +122,7 @@ main {
         padding: 0 4rem;
         margin: 0 auto;
         max-width: 1280px;
+        margin-bottom: 20px;
     }
 
     .grid-container {
@@ -134,8 +135,6 @@ main {
         margin: 0 auto;
         
         .grid-item {
-            align-items: center;
-            justify-items: center;
             text-align: center;
     
             &:hover {
@@ -147,6 +146,7 @@ main {
 
     .werkervaring {
         transform: skew(0, 2deg);
+        padding-bottom: 50px;
 
         h2 {
             padding: 0 4rem;
@@ -203,26 +203,85 @@ main {
     }
 }
 
+.persoonlijk {
+    max-width: 1280px;
+    margin: 50px auto 0 auto;
+    padding: 0 4rem;
+
+    .flex-pers {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-weight: 300;
+        margin: 20px 0;
+
+        .flex-item {
+            flex: 0 1 200px;
+
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+}
+
+// werk-pagina ------------------------------------------------
+#werk {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    .webdesign, .illustratief, .logo {
+        margin-top: 50px;
+    }
+
+    .flex-web {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        align-items: flex-start;
+
+        .flex-item {
+            flex: 0 1 300px;
+            margin: 0 5px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .grid-container {
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: repeat(3, 200px);
+        margin: 20px 0;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
 
 
 // footer
 .footer {
-    margin: 0 auto;
-    max-width: 1280px;
     width: 100%;
     height: 100px;
-    left: 0;
-    bottom: 0;
     text-align: right;
-    padding: 0 4rem;
+    background: rgb(0, 0, 0);
 
     p {
-        position: relative;
-        margin: 0;
-        top: 35px;
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 35px 4rem 0;
     }
 }
-
 
 
 @import 'mobile';

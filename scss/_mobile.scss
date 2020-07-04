@@ -103,6 +103,18 @@
             }
         }
     }
+
+    // contact pagina 
+    .contact {
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: center;
+
+        .flex-item {
+            margin: 10px 0;
+            transition: none;
+        }
+    }
 }
 
 // grotere schermen

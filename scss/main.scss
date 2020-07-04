@@ -266,7 +266,30 @@ main {
     }
 }
 
+// contact pagina 
+.contact {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 250px;
+    align-items: flex-start;
 
+    .flex-item {
+        border: 2px solid white;
+        padding: 15px;
+        transition: all 0.2s ease-in;
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        &:hover {
+            background-color: $tweede-kleur;
+            color: #131313;
+            padding: 30px;
+        }
+    }
+}
 
 
 // footer

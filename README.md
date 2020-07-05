@@ -1,2 +1,1 @@
-#My app
-Dit is mijn portfolio website
+Portfolio website

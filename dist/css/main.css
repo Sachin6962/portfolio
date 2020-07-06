@@ -342,6 +342,8 @@ main {
     align-items: center; }
     .contact .flex-item {
       margin: 10px 0; }
+  #contact h1 {
+    font-size: 4rem; }
   .heading2 {
     font-size: 18px; } }
 

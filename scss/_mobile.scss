@@ -11,13 +11,13 @@
     }
 
     .menu-navigatie {
-        height: 75vh;
+        height: 65vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
     }
 
     .menu-persoonlijk {
-        height: 25vh;
+        height: 35vh;
         transform: translate3d(100%, 0, 0);
 
         .foto {
@@ -31,9 +31,8 @@
     }
 
     &#home {
-        overflow: hidden;
         h1 {
-            margin-top: 15vh;
+            margin-top: 10vh;
             font-size: 4rem;
         }
     }
@@ -112,13 +111,23 @@
 
         .flex-item {
             margin: 10px 0;
-            transition: none;
         }
+    }
+
+    .heading2 {
+        font-size: 18px;
     }
 }
 
 // grotere schermen
 @media screen and (min-width: 769px) {
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+    
     .grid-container {
         grid-template-columns:repeat(4, 1fr);
     }

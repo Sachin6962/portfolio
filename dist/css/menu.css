@@ -1,0 +1,39 @@
+.menu-knop {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-out; }
+  .menu-knop .menu-lijn {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.3s ease-out; }
+  .menu-knop.close {
+    transform: rotate(180deg); }
+    .menu-knop.close .menu-lijn:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-knop.close .menu-lijn:nth-child(2) {
+      opacity: 0; }
+    .menu-knop.close .menu-lijn:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-persoonlijk, .menu-navigatie {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }

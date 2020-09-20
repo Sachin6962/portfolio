@@ -112,7 +112,7 @@ header {
   color: red; }
 
 main {
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 6rem 4rem;
   height: 100%; }
   main .icons {
     margin-top: 1rem; }
@@ -161,7 +161,7 @@ main {
     display: grid;
     justify-content: space-between;
     row-gap: 50px;
-    padding: 40px 20px;
+    padding: 40px 20px 80px 20px;
     transform: skew(0, 2deg);
     max-width: 1280px;
     margin: 0 auto; }
@@ -172,7 +172,7 @@ main {
         transition: all 0.3s ease-out; }
   .schuine-container .werkervaring {
     transform: skew(0, 2deg);
-    padding-bottom: 50px; }
+    padding-bottom: 7rem; }
     .schuine-container .werkervaring h2 {
       padding: 0 4rem;
       margin: 0 auto;
@@ -210,7 +210,7 @@ main {
 
 .persoonlijk {
   max-width: 1280px;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 100px auto;
   padding: 0 4rem; }
   .persoonlijk .flex-pers {
     display: flex;
@@ -264,7 +264,7 @@ main {
       margin-top: 10px; }
     .contact .flex-item:hover {
       background-color: red;
-      color: #131313;
+      color: white;
       padding: 30px; }
 
 .footer {

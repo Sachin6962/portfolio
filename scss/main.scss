@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@ body {
     color: #fff;
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #home-achtergrond {
@@ -51,7 +52,7 @@ header {
 }
 
 main {
-    padding: 4rem 4rem 6rem 4rem;
+    padding: 4rem 4rem 8rem 4rem;
     height: 100%;
 
     .icons {
@@ -115,7 +116,7 @@ main {
         padding: 0 4rem;
         margin: 0 auto;
         max-width: 1280px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .grid-container {
@@ -135,11 +136,15 @@ main {
                     transition: all 0.3s ease-out;
                 }
         }
+
+        i {
+            margin: 10px;
+        }
     }
 
     .werkervaring {
         transform: skew(0, 2deg);
-        padding-bottom: 7rem;
+        padding-bottom: 8rem;
 
         h2 {
             padding: 0 4rem;
@@ -224,8 +229,11 @@ main {
     max-width: 1280px;
     margin: 0 auto;
     
-    .webdesign, .illustratief, .logo {
-        margin-top: 50px;
+    .illustratief, .logo {
+        margin-top: 120px;
+    }
+    .illustratief h2, .logo h2 {
+        margin-bottom: 40px;
     }
 
     .flex-web {
@@ -277,7 +285,6 @@ main {
         }
 
         &:hover {
-            background-color: $tweede-kleur;
             color: white;
             padding: 30px;
         }
@@ -291,6 +298,12 @@ main {
     height: 100px;
     text-align: right;
     background: rgb(0, 0, 0);
+
+    .witte-lijn {
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
 
     p {
         margin: 0 auto;

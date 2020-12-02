@@ -225,7 +225,8 @@ main {
       flex: 0 1 200px; }
       .persoonlijk .flex-pers .flex-item img {
         width: 100px;
-        height: auto; }
+        height: auto;
+        margin-bottom: 20px; }
 
 #werk {
   max-width: 1280px;

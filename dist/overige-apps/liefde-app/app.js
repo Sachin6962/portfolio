@@ -28,7 +28,7 @@ function conclusie() {
         return naam1 + " en " + naam2 + " haten elkaar..";
     }
     else if (willekeurigNummer >= 20 && willekeurigNummer < 50) {
-        return naam1 + " en " + naam2 + " hebben niet zo goede relatie.";
+        return naam1 + " en " + naam2 + " hebben een slechte relatie.";
     }
     else if (willekeurigNummer >= 50 && willekeurigNummer < 80) {
         return naam1 + " en " + naam2 + " kunnen goed met elkaar opschieten";

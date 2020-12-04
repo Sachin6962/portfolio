@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
-        <script defer src="js/app.js"></script>
+        <title>Liefde app</title>
         <script src="https://kit.fontawesome.com/45a6b17468.js" crossorigin="anonymous"></script>
-        <title>S. Kumar</title>
+        <link rel="stylesheet" href="/dist/css/liefde-app.css">
+        <script defer src="/dist/js/menu.js"></script>
+        <script defer src="app.js"></script>
     </head>
-    <body id="home-achtergrond">
+    <body>
         <header>
             <div class="menu-knop">
                 <div class="menu-lijn"></div>
@@ -21,10 +22,10 @@
                     <div class="foto"></div>
                 </div>
                 <ul class="menu-navigatie">
-                    <li class="nav-item huidige-pagina">
+                    <li class="nav-item">
                         <a href="index.html" class="link">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item huidige-pagina">
                         <a href="werk.html" class="link">Werk</a>
                     </li>
                     <li class="nav-item">
@@ -37,16 +38,19 @@
             </nav>
         </header>
 
-        <main id="home">
-            <h1 class="heading1">Sachin <span class="tweede-kleur">Kumar</span></h1>
-            <h2 class="heading2">Front-end Web Developer & Graphic Designer</h2>
-            <div class="icons">
-                <a href="https://linkedin.com/in/sachin-kumar-003336190" target="_blank">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/Sachin6962/portfolio" target="_blank">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
+        <main>
+            <h1 class="heading1">Liefde app</h1>
+            <h2 class="heading2">Druk op het hart om de liefde tussen 2 personen te berekenen</h2>
+            
+            <i class="fas fa-heart fa-10x"></i>
+
+            <div class="namen-container">
+                <div>
+                    <input type="text" class="invoer1">
+                </div>
+                <div>
+                    <input type="text" class="invoer2">
+                </div>
             </div>
         </main>
     </body>

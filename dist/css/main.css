@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #131313;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 300;
+}
+
+h2 {
+  padding: 0.2rem;
+}
+
+.heading1 {
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
 .menu-knop {
   position: absolute;
   z-index: 3;
@@ -128,38 +156,10 @@
   transition: all 0.3s ease-out;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background: #131313;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
 #home-achtergrond {
-  background: url(../img/toetsenbord.jpg);
+  background: url(/dist/img/toetsenbord.jpg);
   background-attachment: fixed;
   background-size: cover;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 300;
-}
-
-h1.heading1, h2.heading1, h3.heading1 {
-  font-size: 6rem;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  padding: 0.2rem;
 }
 
 a {
@@ -270,6 +270,10 @@ main .icons a:hover {
 
 .schuine-container .grid-container .grid-item {
   text-align: center;
+}
+
+.schuine-container .grid-container .grid-item i {
+  margin-bottom: 20px;
 }
 
 .schuine-container .grid-container .grid-item:hover {

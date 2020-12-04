@@ -1,39 +1,10 @@
 @import 'config';
 @import 'menu';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background: #131313;
-    color: #fff;
-    height: 100%;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}
 
 #home-achtergrond {
-    background: url(../img/toetsenbord.jpg);
+    background: url(/dist/img/toetsenbord.jpg);
     background-attachment: fixed;
     background-size: cover;
-}
-
-// headings
-h1, h2, h3 {
-    margin: 0;
-    font-weight: 300;
-
-    &.heading1 {
-        font-size: 6rem;
-        line-height: 1;
-        margin-bottom: 1rem;
-    }
-}
-
-h2 {
-    padding: 0.2rem;
 }
 
 a {
@@ -130,7 +101,10 @@ main {
         
         .grid-item {
             text-align: center;
-    
+
+            i {
+                margin-bottom: 20px;
+            }
             &:hover {
                     color: $tweede-kleur;
                     transition: all 0.3s ease-out;

@@ -151,41 +151,54 @@ main {
   text-align: center;
 }
 
-i {
-  margin: 100px 0px 50px 0px;
-  cursor: pointer;
-  transition: all 0.15s ease-in-out;
+main h2 {
+  margin-bottom: 60px;
 }
 
-i:hover {
-  color: red;
+.knop {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  transition: all 0.15s ease-out;
 }
 
-.namen-container {
-  display: flex;
+.game-over {
+  background-color: #9b0000;
+  opacity: 0.8;
 }
 
-.namen-container div {
-  width: 100%;
+.rood {
+  background-color: red;
 }
 
-.namen-container div input {
-  width: 250px;
-  height: 30px;
-  margin: 20px;
-  background-color: #131313;
-  border: 2px solid white;
-  color: white;
-  font-size: 1.5rem;
+.groen {
+  background-color: green;
+}
+
+.blauw {
+  background-color: #008cff;
+}
+
+.geel {
+  background-color: yellow;
+}
+
+.gedrukt {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
 }
 
 @media screen and (max-width: 768px) {
-  ul.menu-navigatie, div.menu-persoonlijk {
+  ul.menu-navigatie,
+  div.menu-persoonlijk {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  ul.menu-navigatie.show, div.menu-persoonlijk.show {
+  ul.menu-navigatie.show,
+  div.menu-persoonlijk.show {
     transform: translate3d(0, 0, 0);
   }
   .menu-navigatie {
@@ -210,13 +223,10 @@ i:hover {
   h2 {
     font-size: 18px;
   }
-  i {
-    margin: 50px 0px 15px 0px;
-  }
-  .namen-container {
-    flex-direction: column;
-  }
-  .namen-container div input {
-    width: 200px;
+  .knop {
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
   }
 }

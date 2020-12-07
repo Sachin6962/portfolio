@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 body {
@@ -12,19 +22,22 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3 {
+main {
+  padding: 4rem 4rem 8rem 4rem;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+h1 {
   margin: 0;
   font-weight: 300;
-}
-
-h2 {
-  padding: 0.2rem;
-}
-
-.heading1 {
   font-size: 6rem;
-  line-height: 1;
-  margin-bottom: 1rem;
+}
+
+h2, h3 {
+  margin: 0;
+  font-weight: 300;
 }
 
 .menu-knop {
@@ -33,7 +46,6 @@ h2 {
   right: 35px;
   top: 35px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -42,18 +54,15 @@ h2 {
   height: 3px;
   margin: 0 0 5px 0;
   background: #fff;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .menu-knop.close {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .menu-knop.close .menu-lijn:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-knop.close .menu-lijn:nth-child(2) {
@@ -61,8 +70,7 @@ h2 {
 }
 
 .menu-knop.close .menu-lijn:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translate(7px, -6px);
-          transform: rotate(-45deg) translate(7px, -6px);
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .menu {
@@ -77,19 +85,10 @@ h2 {
 }
 
 .menu-persoonlijk, .menu-navigatie {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
   float: left;
   width: 50%;
   height: 100vh;
@@ -101,28 +100,22 @@ h2 {
   padding: 0;
   background: rgba(18, 18, 18, 0.9);
   list-style: none;
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
-  -webkit-transition: all 0.1s ease-out;
+  transform: translate3d(0, -100%, 0);
   transition: all 0.1s ease-out;
 }
 
 .menu-navigatie.show {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .menu-persoonlijk {
   background: rgba(31, 31, 31, 0.9);
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition: all 0.1s ease-out;
+  transform: translate3d(0, 100%, 0);
   transition: all 0.1s ease-out;
 }
 
 .menu-persoonlijk.show {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .menu-persoonlijk .foto {
@@ -146,13 +139,11 @@ h2 {
   font-weight: 300;
   color: white;
   text-decoration: none;
-  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
 .menu .nav-item .link:hover {
   color: red;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -162,37 +153,28 @@ h2 {
   background-size: cover;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
 .tweede-kleur {
   color: red;
 }
 
-main {
-  padding: 4rem 4rem 8rem 4rem;
-  height: 100%;
+#home h2 {
+  padding: 0.2rem;
 }
 
-main .icons {
+#home {
+  margin: 0;
+}
+
+.icons {
   margin-top: 1rem;
 }
 
-main .icons a {
+.icons a {
   padding: 0.4rem;
 }
 
-main .icons a:hover {
+.icons a:hover {
   color: red;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -200,26 +182,15 @@ main .icons a:hover {
   letter-spacing: 5px;
 }
 
-#over-mij {
-  margin: 0 auto;
-  max-width: 1280px;
-}
-
 .bio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .bio .item1 {
   max-height: 400px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   border: 3px solid red;
   margin: 10px;
 }
@@ -237,14 +208,12 @@ main .icons a:hover {
 .schuine-container {
   width: 100%;
   background: #252525;
-  -webkit-transform: skew(0, -2deg);
-          transform: skew(0, -2deg);
+  transform: skew(0, -2deg);
 }
 
 .schuine-container h2 {
   padding-top: 40px;
-  -webkit-transform: skew(0, 2deg);
-          transform: skew(0, 2deg);
+  transform: skew(0, 2deg);
 }
 
 .schuine-container .vaardigheden {
@@ -255,15 +224,11 @@ main .icons a:hover {
 }
 
 .schuine-container .grid-container {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   row-gap: 50px;
   padding: 40px 20px 80px 20px;
-  -webkit-transform: skew(0, 2deg);
-          transform: skew(0, 2deg);
+  transform: skew(0, 2deg);
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -278,7 +243,6 @@ main .icons a:hover {
 
 .schuine-container .grid-container .grid-item:hover {
   color: red;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -287,8 +251,7 @@ main .icons a:hover {
 }
 
 .schuine-container .werkervaring {
-  -webkit-transform: skew(0, 2deg);
-          transform: skew(0, 2deg);
+  transform: skew(0, 2deg);
   padding-bottom: 8rem;
 }
 
@@ -299,8 +262,6 @@ main .icons a:hover {
 }
 
 .schuine-container .werkervaring .flex-werk {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 1280px;
   margin: 20px auto 0 auto;
@@ -309,24 +270,18 @@ main .icons a:hover {
 
 .schuine-container .werkervaring .flex-werk .flex-item1 {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  flex: 0 1 50%;
 }
 
 .schuine-container .werkervaring .flex-werk .flex-item1 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .schuine-container .werkervaring .flex-werk .flex-item2 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  flex: 0 1 50%;
   background: #131313;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -361,32 +316,21 @@ main .icons a:hover {
 }
 
 .persoonlijk .flex-pers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
   font-weight: 300;
   margin: 20px 0;
 }
 
 .persoonlijk .flex-pers .flex-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .persoonlijk .flex-pers .flex-item img {
   width: 100px;
   height: auto;
   margin-bottom: 20px;
-}
-
-#werk {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 #werk .illustratief, #werk .logo {
@@ -398,22 +342,14 @@ main .icons a:hover {
 }
 
 #werk .flex-web {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 20px 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 #werk .flex-web .flex-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 300px;
-          flex: 0 1 300px;
+  flex: 0 1 300px;
   margin: 0 5px;
 }
 
@@ -423,18 +359,12 @@ main .icons a:hover {
 }
 
 #werk .grid-container {
-  display: -ms-grid;
   display: grid;
   row-gap: 50px;
-  -ms-grid-columns: (200px)[3];
-      grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(3, 200px);
   margin: 20px 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #werk .grid-container img {
@@ -442,22 +372,16 @@ main .icons a:hover {
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   text-align: center;
   margin-top: 250px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .contact .flex-item {
   border: 2px solid white;
   padding: 15px;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
@@ -496,19 +420,16 @@ main .icons a:hover {
     min-height: 0;
   }
   ul.menu-navigatie.show, div.menu-persoonlijk.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   .menu-navigatie {
     height: 65vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
   .menu-persoonlijk {
     height: 35vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
   .menu-persoonlijk .foto {
     width: 150px;
@@ -529,41 +450,24 @@ main .icons a:hover {
     font-size: 4rem;
   }
   #over-mij .bio {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   #over-mij .bio .item1 {
     max-width: 200px;
   }
   .grid-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .flex-werk {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .flex-werk:last-child {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .flex-pers {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .flex-pers .flex-item {
     max-width: 300px;
@@ -574,40 +478,25 @@ main .icons a:hover {
     font-size: 4rem;
   }
   #werk .flex-web {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   #werk .flex-web .flex-item {
     max-width: 230px;
     margin: 10px 0;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+    flex: 1 0 100%;
   }
   #werk .grid-container {
-    -ms-grid-columns: (250px)[1];
-        grid-template-columns: repeat(1, 250px);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    grid-template-columns: repeat(1, 250px);
+    justify-content: center;
   }
   #werk .grid-container .grid-item {
     margin: 0 10px;
   }
   .contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-top: 30px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .contact .flex-item {
     margin: 10px 0;
@@ -628,8 +517,6 @@ main .icons a:hover {
     margin-top: 20vh;
   }
   .grid-container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-/*# sourceMappingURL=main.css.map */

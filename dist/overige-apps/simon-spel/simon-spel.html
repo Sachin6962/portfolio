@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Liefde app</title>
-        <script src="https://kit.fontawesome.com/45a6b17468.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../../css/liefde-app.css">
+        <title>Simon app</title>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <link rel="stylesheet" href="../../css/simon-spel.css">
         <script defer src="../../js/menu.js"></script>
         <script defer src="app.js"></script>
     </head>
@@ -39,17 +39,24 @@
         </header>
 
         <main>
-            <h1>Liefde app</h1>
-            <h2>Druk op het hart om de liefde tussen 2 personen te berekenen</h2>
-            
-            <i class="fas fa-heart fa-10x"></i>
-
-            <div class="namen-container">
+            <h1>Simon spel</h1>
+            <h2>Klik op het scherm om te beginnen</h2>
+            <div>
                 <div>
-                    <input type="text" class="invoer1">
+                    <div type="button" id="groen" class="knop groen">
+        
+                    </div>
+                    <div type="button" id="rood" class="knop rood">
+        
+                    </div>
                 </div>
                 <div>
-                    <input type="text" class="invoer2">
+                    <div type="button" id="geel" class="knop geel">
+        
+                    </div>
+                    <div type="button" id="blauw" class="knop blauw">
+        
+                    </div>
                 </div>
             </div>
         </main>

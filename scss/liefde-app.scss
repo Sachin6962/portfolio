@@ -24,7 +24,7 @@ i:hover {
             width: 250px;
             height: 30px;
             margin: 20px;
-            background-color:  #131313;
+            background-color: $derde-kleur;
             border: 2px solid white;
             color: white;
             font-size: 1.5rem;
@@ -34,44 +34,6 @@ i:hover {
 
 
 @media screen and (max-width: 768px) {
-    //  menu re-stylen
-    ul.menu-navigatie, div.menu-persoonlijk {
-        float: none;
-        width: 100%;
-        min-height: 0;
-
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-    .menu-navigatie {
-        height: 65vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
-    }
-
-    .menu-persoonlijk {
-        height: 35vh;
-        transform: translate3d(100%, 0, 0);
-
-        .foto {
-            width: 150px;
-            height: 150px;
-        }
-    }
-
-    .nav-item {
-        margin: 1rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 18px;
-    }
-
     i {
         margin: 50px 0px 15px 0px;
     }
@@ -84,3 +46,5 @@ i:hover {
         }
     }
 }
+
+@import 'mobile';

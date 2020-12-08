@@ -192,14 +192,21 @@ main h2 {
 }
 
 @media screen and (max-width: 768px) {
-  ul.menu-navigatie,
-  div.menu-persoonlijk {
+  .knop {
+    margin: 10px;
+    height: 90px;
+    width: 90px;
+    border-radius: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ul.menu-navigatie, div.menu-persoonlijk {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  ul.menu-navigatie.show,
-  div.menu-persoonlijk.show {
+  ul.menu-navigatie.show, div.menu-persoonlijk.show {
     transform: translate3d(0, 0, 0);
   }
   .menu-navigatie {
@@ -224,10 +231,76 @@ main h2 {
   h2 {
     font-size: 18px;
   }
-  .knop {
-    margin: 10px;
-    height: 100px;
-    width: 100px;
-    border-radius: 20%;
+  #home h1 {
+    margin-top: 10vh;
+  }
+  #over-mij {
+    overflow: hidden;
+  }
+  #over-mij .bio {
+    flex-direction: column;
+    align-items: center;
+  }
+  #over-mij .bio .item1 {
+    max-width: 200px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .flex-werk {
+    flex-direction: column;
+  }
+  .flex-werk:last-child {
+    flex-direction: column-reverse;
+  }
+  .flex-pers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-pers .flex-item {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  #werk section {
+    margin-top: 50px;
+  }
+  #werk section h2, #werk section h2 {
+    margin-bottom: 20px;
+  }
+  #werk .flex-web {
+    flex-direction: column;
+    align-items: center;
+  }
+  #werk .flex-web .flex-item {
+    max-width: 230px;
+    flex: 1 0 100%;
+    margin: 10px 0px;
+  }
+  #werk .grid-container {
+    grid-template-columns: repeat(1, 250px);
+    justify-content: center;
+  }
+  #werk .grid-container .grid-item {
+    margin: 0 10px;
+  }
+  .contact {
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+  }
+  .contact .flex-item {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #home {
+    overflow: hidden;
+  }
+  #home h1 {
+    margin-top: 20vh;
+  }
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

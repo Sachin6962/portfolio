@@ -334,23 +334,24 @@ h2, h3 {
 }
 
 #werk section {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 #werk section h2, #werk section h2 {
   margin-bottom: 40px;
+  padding: 5px;
 }
 
 #werk .flex-web {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin-bottom: 20px;
   align-items: flex-start;
 }
 
 #werk .flex-web .flex-item {
   flex: 0 1 300px;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 #werk .flex-web .flex-item img {
@@ -365,6 +366,10 @@ h2, h3 {
   margin: 20px 0;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+#werk .grid-container .grid-item {
+  margin: 0 10px;
 }
 
 #werk .grid-container img {
@@ -438,16 +443,17 @@ h2, h3 {
   .nav-item {
     margin: 1rem;
   }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 18px;
+  }
   #home h1 {
     margin-top: 10vh;
-    font-size: 4rem;
   }
   #over-mij {
     overflow: hidden;
-  }
-  #over-mij h1 {
-    margin-top: 2vh;
-    font-size: 4rem;
   }
   #over-mij .bio {
     flex-direction: column;
@@ -473,9 +479,11 @@ h2, h3 {
     max-width: 300px;
     margin-bottom: 20px;
   }
-  #werk h1 {
-    margin-top: 2vh;
-    font-size: 4rem;
+  #werk section {
+    margin-top: 50px;
+  }
+  #werk section h2, #werk section h2 {
+    margin-bottom: 20px;
   }
   #werk .flex-web {
     flex-direction: column;
@@ -483,8 +491,8 @@ h2, h3 {
   }
   #werk .flex-web .flex-item {
     max-width: 230px;
-    margin: 10px 0;
     flex: 1 0 100%;
+    margin: 10px 0px;
   }
   #werk .grid-container {
     grid-template-columns: repeat(1, 250px);
@@ -500,12 +508,6 @@ h2, h3 {
   }
   .contact .flex-item {
     margin: 10px 0;
-  }
-  #contact h1 {
-    font-size: 4rem;
-  }
-  #home h2 {
-    font-size: 18px;
   }
 }
 

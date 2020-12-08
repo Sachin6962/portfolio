@@ -31,20 +31,24 @@
         margin: 1rem;
     }
 
+    // titels kleiner maken
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
     &#home {
         h1 {
             margin-top: 10vh;
-            font-size: 4rem;
         }
     }
 
-    // over mij pagina
+    // over mij pagina ------------------------------------------------
     &#over-mij {
         overflow: hidden;
-        h1 {
-            margin-top: 2vh;
-            font-size: 4rem;
-        }
 
         .bio {
             flex-direction: column;
@@ -76,11 +80,13 @@
         }
     }
 
-    // werk pagina
+    // werk pagina ------------------------------------------------
     #werk {
-        h1 {
-            margin-top: 2vh;
-            font-size: 4rem
+        section {
+            margin-top: 50px;
+        }
+        section h2, section h2 {
+            margin-bottom: 20px;
         }
 
         .flex-web {
@@ -89,8 +95,8 @@
 
             .flex-item {
                 max-width: 230px;
-                margin: 10px 0;
                 flex: 1 0 100%;
+                margin: 10px 0px;
             }
         }
 
@@ -104,7 +110,7 @@
         }
     }
 
-    // contact pagina 
+    // contact pagina ------------------------------------------------
     .contact {
         flex-direction: column;
         margin-top: 30px;
@@ -113,15 +119,6 @@
         .flex-item {
             margin: 10px 0;
         }
-    }
-    #contact {
-        h1 {
-            font-size: 4rem;
-        }
-    }
-
-    #home h2 {
-        font-size: 18px;
     }
 }
 

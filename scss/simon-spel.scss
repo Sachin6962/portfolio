@@ -47,50 +47,12 @@ main {
 
 
 @media screen and (max-width: 768px) {
-    //  menu re-stylen
-    ul.menu-navigatie,
-    div.menu-persoonlijk {
-        float: none;
-        width: 100%;
-        min-height: 0;
-
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-    .menu-navigatie {
-        height: 65vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
-    }
-
-    .menu-persoonlijk {
-        height: 35vh;
-        transform: translate3d(100%, 0, 0);
-
-        .foto {
-            width: 150px;
-            height: 150px;
-        }
-    }
-
-    .nav-item {
-        margin: 1rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
     .knop {
         margin: 10px;
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
         border-radius: 20%;
     }
 }
+
+@import 'mobile';

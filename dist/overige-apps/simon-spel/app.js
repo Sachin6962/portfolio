@@ -32,19 +32,6 @@ function checkAntwoord(gebruikerInvoer) {
     }
 }
 
-//  start de game
-// $("body").keypress(function() {
-//     if (startGame === true) {
-//         sluitGame = false;
-//         startGame = false;
-//         $("h2").text("Het spel is begonnen..");
-//         voegToeAanPatroon();
-//     }
-//     else {
-//         return;        
-//     }
-// });
-
 $("main").click(function() {
     if (herleid === true) {
         herleid = false;

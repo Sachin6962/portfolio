@@ -157,7 +157,7 @@ main h1 {
 }
 
 main h2 {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
   padding: 0 4rem;
 }
 
@@ -185,6 +185,10 @@ main h2 {
   margin-left: calc(50px / -4);
   margin-right: calc(50px / -4);
   z-index: 1;
+}
+
+.piano .rood {
+  background-color: red;
 }
 
 /* onderaan de originele waarden voordat ik de calc() gebruikte. de width

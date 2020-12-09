@@ -12,7 +12,7 @@ main {
     }
 
     h2 {
-        margin-bottom: 120px;
+        margin-bottom: 160px;
         padding: 0 4rem;
     }
 }
@@ -42,8 +42,10 @@ main {
         margin-right: calc(#{$toetsBreedte} / -4);
         z-index: 1;
     }
+    .rood {
+        background-color: red;
+    }
 }
-
 
 
 /* onderaan de originele waarden voordat ik de calc() gebruikte. de width

@@ -43,4 +43,4 @@ function resetWaarden() {
     document.querySelector(".invoer2").value = "";
 }
 
-document.querySelector("i").addEventListener("click", bereken);
+document.querySelector("main i").addEventListener("click", bereken);

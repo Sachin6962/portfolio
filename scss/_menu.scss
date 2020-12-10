@@ -5,6 +5,7 @@
     top: 35px;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    z-index: 5;
 
     .menu-lijn {
         width: 28px;
@@ -25,7 +26,7 @@
         }
         // lijn 2 verbergen
         &:nth-child(2) {
-            opacity: 0;;
+            opacity: 0;
         }
         // lijn 3 draaien
         &:nth-child(3) {
@@ -34,18 +35,13 @@
     }
     }
 }
-.verhoog1 {
-    z-index: 1;
-}
-.verhoog2 {
-    z-index: 2;
-}
 
 .menu {
     position: fixed;
     top: 0;
     width: 100%;
     visibility: hidden;
+    z-index: 4;
 
     &.show {
         visibility: visible;
@@ -68,7 +64,7 @@
         background: darken(rgba($hoofd-kleur, 0.9), 15);
         list-style: none;
         transform: translate3d(0, -100%, 0);
-        transition: all 0.1s ease-out;
+        transition: all 0.2s ease-out;
 
         &.show {
             // in het scherm komen animatie
@@ -126,6 +122,7 @@
     left: 35px;
     top: 30px;
     cursor: pointer;
+    z-index: 5;
 }
 .info-scherm {
     position: fixed;
@@ -137,8 +134,9 @@
     padding: 15% 25%;
     visibility: hidden;
     transform: translate3d(-100%, 0, 0);
-    transition: all 1s ease-out;
+    transition: all 0.2s ease-out;
     font-size: 1.5rem;
+    z-index: 4;
 
     &.open {
         visibility: visible;
@@ -149,4 +147,9 @@
         height: 100%;
         border: 2px solid white;
     }
+}
+
+//  haalt het NIET gedrukte menu-icoon buiten klikbereik
+.verlaagd {
+    z-index: 1;
 }

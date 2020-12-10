@@ -46,6 +46,7 @@ h2, h3 {
   top: 35px;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  z-index: 5;
 }
 
 .menu-knop .menu-lijn {
@@ -72,19 +73,12 @@ h2, h3 {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-.verhoog1 {
-  z-index: 1;
-}
-
-.verhoog2 {
-  z-index: 2;
-}
-
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
   visibility: hidden;
+  z-index: 4;
 }
 
 .menu.show {
@@ -108,7 +102,7 @@ h2, h3 {
   background: rgba(18, 18, 18, 0.9);
   list-style: none;
   transform: translate3d(0, -100%, 0);
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .menu-navigatie.show {
@@ -159,6 +153,7 @@ h2, h3 {
   left: 35px;
   top: 30px;
   cursor: pointer;
+  z-index: 5;
 }
 
 .info-scherm {
@@ -171,8 +166,9 @@ h2, h3 {
   padding: 15% 25%;
   visibility: hidden;
   transform: translate3d(-100%, 0, 0);
-  transition: all 1s ease-out;
+  transition: all 0.2s ease-out;
   font-size: 1.5rem;
+  z-index: 4;
 }
 
 .info-scherm.open {
@@ -183,6 +179,10 @@ h2, h3 {
 .info-scherm p {
   height: 100%;
   border: 2px solid white;
+}
+
+.verlaagd {
+  z-index: 1;
 }
 
 #home-achtergrond {

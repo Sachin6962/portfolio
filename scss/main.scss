@@ -37,7 +37,7 @@
     letter-spacing: 5px;
 }
 
-.bio {
+.intro {
     display: flex;
     margin-top: 50px;
     justify-content: center;
@@ -51,11 +51,24 @@
     }
     .item2 {
         margin: 10px;
-        font-size: 19px;
-        font-weight: 300;
-
+        
         p {
-            padding: 4px;
+            font-size: 19px;
+        }
+
+        button {
+            background-color: $derde-kleur;
+            color: white;
+            font-size: 1.25rem;
+            border: 1px solid white;
+            padding: 5px 20px;
+            cursor: pointer;
+            margin: 5px 0px;
+        }
+        button:hover {
+            background-color: white;
+            color: $derde-kleur;
+            transition: all 0.3s ease-out;
         }
     }
 }
@@ -138,10 +151,6 @@
                     margin: 0;
                     padding: 2rem;
                 }
-
-                p, h3 {
-                    font-weight: 300;
-                }
             }
         }
 
@@ -171,7 +180,6 @@
         display: flex;
         justify-content: space-between;
         text-align: center;
-        font-weight: 300;
         margin: 20px 0;
 
         .flex-item {

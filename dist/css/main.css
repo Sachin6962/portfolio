@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  margin: 0;
 }
 
 a {
@@ -20,7 +21,6 @@ body {
   background: #131313;
   color: #fff;
   height: 100%;
-  margin: 0;
 }
 
 main {
@@ -31,13 +31,19 @@ main {
 }
 
 h1 {
-  margin: 0;
   font-size: 6rem;
 }
 
-h2, h3 {
-  margin: 0;
-  font-size: 1.75rem;
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 10px 0px;
 }
 
 .menu-knop {
@@ -164,9 +170,9 @@ h2, h3 {
   background: rgba(5, 5, 5, 0.9);
   padding: 20% 25%;
   visibility: hidden;
+  font-size: 1.5rem;
   transform: translate3d(-100%, 0, 0);
   transition: all 0.2s ease-out;
-  font-size: 1.3rem;
   text-align: center;
   z-index: 2;
 }
@@ -240,22 +246,6 @@ h2, h3 {
   font-size: 19px;
 }
 
-.intro .item2 button {
-  background-color: #131313;
-  color: white;
-  font-size: 1.25rem;
-  border: 1px solid white;
-  padding: 5px 20px;
-  cursor: pointer;
-  margin: 5px 0px;
-}
-
-.intro .item2 button:hover {
-  background-color: white;
-  color: #131313;
-  transition: all 0.3s ease-out;
-}
-
 .schuine-container {
   width: 100%;
   background: #252525;
@@ -312,6 +302,10 @@ h2, h3 {
   max-width: 1280px;
 }
 
+.schuine-container .werkervaring p {
+  margin: 5px 0px;
+}
+
 .schuine-container .werkervaring .flex-werk {
   display: flex;
   max-width: 1280px;
@@ -352,7 +346,6 @@ h2, h3 {
 }
 
 .schuine-container .werkervaring .expand-scherm div p {
-  margin: 0;
   padding: 2rem;
 }
 

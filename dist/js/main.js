@@ -16,7 +16,6 @@ let showMenu = false;
 menuKnop.addEventListener('click', toggleMenu);
 
 
-
 //  menu aan en uit doen
 function toggleMenu() {
     if (showMenu ==  false) {

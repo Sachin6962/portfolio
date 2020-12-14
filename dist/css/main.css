@@ -35,11 +35,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -243,7 +243,7 @@ p {
 }
 
 .intro .item2 p {
-  font-size: 19px;
+  font-size: 1.25rem;
 }
 
 .schuine-container {
@@ -304,6 +304,7 @@ p {
 
 .schuine-container .werkervaring p {
   margin: 5px 0px;
+  font-size: 1.1rem;
 }
 
 .schuine-container .werkervaring .flex-werk {
@@ -335,20 +336,6 @@ p {
   padding: 2rem;
 }
 
-.schuine-container .werkervaring .expand-scherm {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 4rem;
-}
-
-.schuine-container .werkervaring .expand-scherm div {
-  background: #131313;
-}
-
-.schuine-container .werkervaring .expand-scherm div p {
-  padding: 2rem;
-}
-
 .persoonlijk {
   max-width: 1280px;
   margin: 50px auto 100px auto;
@@ -364,6 +351,10 @@ p {
 
 .persoonlijk .flex-pers .flex-item {
   flex: 0 1 200px;
+}
+
+.persoonlijk .flex-pers .flex-item p {
+  font-size: 1.1rem;
 }
 
 .persoonlijk .flex-pers .flex-item img {
@@ -455,6 +446,7 @@ p {
   margin: 0 auto;
   max-width: 1280px;
   padding: 35px 4rem 0;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -481,10 +473,6 @@ p {
   }
   .nav-item {
     margin: 1rem;
-  }
-  .info-scherm {
-    padding: 15% 20%;
-    font-size: 1rem;
   }
   h1 {
     font-size: 3rem;
@@ -543,6 +531,10 @@ p {
   }
   #werk .grid-container .grid-item {
     margin: 0 10px;
+  }
+  .info-scherm {
+    padding: 25% 20%;
+    font-size: 1rem;
   }
   .contact {
     flex-direction: column;

@@ -35,11 +35,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -293,10 +293,6 @@ van de .wit class wordt opgeslagen in een sass variabel
   .nav-item {
     margin: 1rem;
   }
-  .info-scherm {
-    padding: 15% 20%;
-    font-size: 1rem;
-  }
   h1 {
     font-size: 3rem;
   }
@@ -354,6 +350,10 @@ van de .wit class wordt opgeslagen in een sass variabel
   }
   #werk .grid-container .grid-item {
     margin: 0 10px;
+  }
+  .info-scherm {
+    padding: 25% 20%;
+    font-size: 1rem;
   }
   .contact {
     flex-direction: column;

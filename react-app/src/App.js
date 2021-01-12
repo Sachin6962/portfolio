@@ -1,8 +1,12 @@
-import './App.scss';
+import Voorpagina from './Voorpagina';
+import Menu from './Components/Menu';
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <div>
+      <Menu />
+      <Voorpagina />
+    </div>
   );
 }
 

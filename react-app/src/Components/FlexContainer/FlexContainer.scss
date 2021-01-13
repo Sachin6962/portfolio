@@ -1,0 +1,41 @@
+section {
+  margin-bottom: 60px;
+}
+
+
+.flex-web {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  align-items: flex-start;
+
+  .flex-item {
+      flex: 0 1 300px;
+      margin: 0 10px;
+
+      img {
+          width: 100%;
+          height: auto;
+      }
+  }
+}
+
+h2 {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-web {
+    flex-direction: column;
+    align-items: center;
+
+    .flex-item {
+        max-width: 230px;
+        flex: 1 0 100%;
+        margin: 10px 0px;
+    }
+  }
+  h2 {
+    padding: 0;
+  }
+}

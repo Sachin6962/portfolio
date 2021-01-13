@@ -1,4 +1,4 @@
-@import '../Algemeen';
+@import '../../algemeen';
 
 // menu knop
 .menu-knop {
@@ -88,7 +88,7 @@
       .foto {
           width: 250px;
           height: 250px;
-          background: url('../img/foto1.2.jpg');
+          background: url('../../img/foto1.2.jpg');
           background-size: cover;
           border-radius: 50%;
           border: solid 3px $tweede-kleur;

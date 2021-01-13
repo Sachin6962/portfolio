@@ -1,11 +1,10 @@
-import Voorpagina from './Voorpagina';
-import Menu from './Components/Menu';
+import Werk from './Pages/Werk';
+
 
 function App() {
   return (
     <div>
-      <Menu />
-      <Voorpagina />
+      <Werk />
     </div>
   );
 }

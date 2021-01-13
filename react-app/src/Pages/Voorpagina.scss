@@ -1,13 +1,13 @@
-@import 'Algemeen';
+@import '../algemeen';
 
 .achtergrond {
-  background: url('img/toetsenbord.jpg');
+  background: url('../img/toetsenbord.jpg');
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
 
-main {
+.voorpagina {
   margin: 0 !important;
 
   .tweede-kleur {

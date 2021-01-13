@@ -4,7 +4,7 @@ import './Voorpagina.scss';
 function Voorpagina() {
   return (
     <div className='achtergrond'>
-      <main>
+      <main className='voorpagina'>
           <h1>Sachin <span className="tweede-kleur">Kumar</span></h1>
           <h2>Front-end Web Developer & Graphic Designer</h2>
           <div className="iconen">

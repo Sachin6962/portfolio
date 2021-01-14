@@ -6,7 +6,6 @@ import FlexItem from './FlexItem';
 function FlexContainer(props) {
   return (
     <section>
-      <h2><span className="tweede-kleur spacing">{props.naam}</span></h2>
       <div className='flex-web'>
         <FlexItem 
           href={props.href1}

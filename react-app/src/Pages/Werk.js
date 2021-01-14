@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Menu from '../Components/Menu/Menu';
-import Titel from '../Components/Titel/Titel';
+import GroteTitel from '../Components/Titels/GroteTitel';
+import KleineTitel from '../Components/Titels/KleineTitel';
 import FlexContainer from '../Components/FlexContainer/FlexContainer';
 import Footer from '../Components/Footer/Footer';
 
@@ -12,36 +13,44 @@ import illustratie1 from '../img/werk/illustratief/illustratie1.jpg';
 import illustratie2 from '../img/werk/illustratief/illustratie2.jpg';
 import illustratie3 from '../img/werk/illustratief/illustratie3.jpg';
 
-function Werk() {
-  return (
-    <div>
-      <Menu />
-      <main>
-        <Titel
-          naam='Mijn werk'
-        />
-        <FlexContainer 
-          naam='JAVASCRIPT PROJECTEN'
-          href1='#'
-          imgUrl1={project1}
-          href2='#'
-          imgUrl2={project2}
-          href3='#'
-          imgUrl3={project3}
-        />
-        <FlexContainer 
-          naam='ILLUSTRATIEF'
-          href1='#'
-          imgUrl1={illustratie1}
-          href2='#'
-          imgUrl2={illustratie2}
-          href3='#'
-          imgUrl3={illustratie3}
-        />
-      </main>
-      <Footer />
-    </div>
-  )
+class Werk extends React.Component {
+  render() {
+    return (
+      <div>
+        <Menu />
+        <main>
+          <GroteTitel
+            naam='Mijn werk'
+          />
+          <KleineTitel
+            naam='JAVASCRIPT PROJECTEN'
+            classes='tweede-kleur spacing'
+          />
+          <FlexContainer 
+            href1='#'
+            imgUrl1={project1}
+            href2='#'
+            imgUrl2={project2}
+            href3='#'
+            imgUrl3={project3}
+          />
+          <KleineTitel
+            naam='ILLUSTRATIEF'
+            classes='tweede-kleur spacing'
+          />
+          <FlexContainer 
+            href1='#'
+            imgUrl1={illustratie1}
+            href2='#'
+            imgUrl2={illustratie2}
+            href3='#'
+            imgUrl3={illustratie3}
+          />
+        </main>
+        <Footer />
+      </div>
+    )
+  }
 }
 
 export default Werk;

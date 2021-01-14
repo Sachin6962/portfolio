@@ -20,10 +20,6 @@ section {
   }
 }
 
-h2 {
-  padding: 10px;
-}
-
 @media screen and (max-width: 768px) {
   .flex-web {
     flex-direction: column;
@@ -34,8 +30,5 @@ h2 {
         flex: 1 0 100%;
         margin: 10px 0px;
     }
-  }
-  h2 {
-    padding: 0;
   }
 }

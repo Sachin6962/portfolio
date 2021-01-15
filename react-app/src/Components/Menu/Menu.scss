@@ -1,5 +1,11 @@
 @import '../../algemeen';
 
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
 // menu knop
 .menu-knop {
   position: absolute;

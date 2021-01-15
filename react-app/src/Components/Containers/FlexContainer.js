@@ -1,7 +1,13 @@
 import React from 'react';
-
 import './FlexContainer.scss';
-import FlexItem from './FlexItem';
+
+function FlexItem(props) {
+  return (
+    <a href={props.href} target="_blank" className="flex-item">
+      <img src={props.imgUrl} alt=""/>
+    </a>
+  )
+}
 
 function FlexContainer(props) {
   return (

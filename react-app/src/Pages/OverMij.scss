@@ -1,1 +1,48 @@
 @import '../algemeen';
+
+h2 {
+  padding: 0;
+}
+
+.intro {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+
+  
+  .item1 {
+      max-height: 400px;
+      flex: 0 0 auto;
+      border: 3px solid red;
+      margin: 10px;
+  }
+  .item2 {
+      margin: 10px;
+      
+      p {
+          font-size: 1.25rem;
+      }
+  }
+}
+
+.schuine-container {
+  width: 100%;
+  background: rgb(37, 37, 37);
+  transform: skew(0, -2deg);
+
+  .content {
+    padding: 0 4rem;
+    transform: skew(0, 2deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+
+    .item1 {
+        max-width: 200px;
+    }
+  }
+}

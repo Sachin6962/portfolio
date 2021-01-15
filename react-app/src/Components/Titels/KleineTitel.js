@@ -3,9 +3,7 @@ import './KleineTitel.scss';
 
 function KleineTitel(props) {
   return (
-    <h2 className='kleine-titel'>
-      <span className={props.classes}>{props.naam}</span>
-    </h2>
+    <h2 className='kleine-titel'>{props.naam}</h2>
   )
 }
 

@@ -1,15 +1,14 @@
 import React from 'react';
-import Werk from './Pages/Werk';
+import OverMij from './Pages/OverMij';
 
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Werk />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <OverMij />
+    </div>
+  );
 }
+
 
 export default App;

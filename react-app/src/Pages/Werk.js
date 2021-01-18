@@ -3,8 +3,8 @@ import React from 'react';
 import Menu from '../Components/Menu/Menu';
 import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
-import FlexContainer from '../Components/Containers/FlexContainer';
-import GridContainer from '../Components/Containers/GridContainer';
+import FlexContainer from '../Components/Containers/Flex/FlexContainer';
+import GridContainer from '../Components/Containers/Grid/GridContainer';
 import Footer from '../Components/Footer/Footer';
 
 import project1 from '../img/werk/projecten/liefde-app.png';

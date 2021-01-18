@@ -33,7 +33,24 @@ h2 {
   .content {
     padding: 0 4rem;
     transform: skew(0, 2deg);
+    margin: 0 auto;
+    max-width: 1280px;
+
+    h2 {
+      padding-top: 50px;
+    }
+
+    .flex-container:last-child {
+      padding-bottom: 50px;
+    }
   }
+}
+
+.persoonlijk {
+  max-width: 1280px;
+  margin: 50px auto 100px auto;
+  padding: 0 4rem;
+
 }
 
 @media screen and (max-width: 768px) {

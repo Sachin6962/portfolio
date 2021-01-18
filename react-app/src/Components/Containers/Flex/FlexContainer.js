@@ -11,8 +11,7 @@ function FlexItem(props) {
 
 function FlexContainer(props) {
   return (
-    <section>
-      <div className='flex-web'>
+    <section className='flex-container'>
         <FlexItem 
           href={props.href1}
           imgUrl={props.imgUrl1}
@@ -25,7 +24,6 @@ function FlexContainer(props) {
           href={props.href3}
           imgUrl={props.imgUrl3}
         />
-      </div>
     </section>
   )
 }

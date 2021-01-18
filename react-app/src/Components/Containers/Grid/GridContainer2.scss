@@ -1,0 +1,42 @@
+@import '../../../algemeen';
+
+.grid-container {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 50px;
+  padding: 20px 0px;
+  max-width: 1280px;
+  margin: 0 auto;
+  
+  .grid-item {
+      text-align: center;
+
+      span {
+        font-size: 1.1rem;
+      }
+
+      i {
+          margin-bottom: 20px;
+      }
+      &:hover {
+              color: $tweede-kleur;
+              transition: all 0.3s ease-out;
+          }
+  }
+
+  i {
+      margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .grid-container {
+      grid-template-columns:repeat(4, 1fr);
+  }
+}

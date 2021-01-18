@@ -1,11 +1,13 @@
 import React from 'react';
 import './Voorpagina.scss';
 
+import Menu from '../Components/Menu/Menu';
 import KleineTitel from '../Components/Titels/KleineTitel';
 
 function Voorpagina() {
   return (
     <div className='achtergrond'>
+    <Menu />
       <main className='voorpagina'>
           <h1>Sachin <span className="tweede-kleur">Kumar</span></h1>
           <KleineTitel

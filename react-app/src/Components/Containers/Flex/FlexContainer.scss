@@ -1,13 +1,9 @@
-section {
-  margin-bottom: 60px;
-}
-
-
-.flex-web {
+.flex-container {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px;
   align-items: flex-start;
+  margin-bottom: 60px;
 
   .flex-item {
       flex: 0 1 300px;
@@ -21,7 +17,7 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .flex-web {
+  .flex-container {
     flex-direction: column;
     align-items: center;
 

@@ -7,6 +7,26 @@ import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
 
 
+//  checkt welke toets wordt gedrukt en speelt bijbehorend geluid af
+function speelGeluid() {
+    var geluid = new Audio("../../../../public/geluiden/" + this.id + ".mp3");
+    geluid.play();
+    animatie(this.id);
+
+  //  geeft toets andere kleur wanneer je erop klikt
+  function animatie(toets) {
+    document.querySelector("#" + toets).classList.add("rood");
+    setTimeout(function() {
+        document.querySelector("#" + toets).classList.remove("rood");
+    }, 100);
+  }
+}
+
+// var toetsen = document.querySelectorAll(".toets");
+  
+// for (let i = 0; i < toetsen.length; i++) {
+//   toetsen[i].addEventListener("click", speelGeluid);
+// }
 
 function PianoApp() {
   return (

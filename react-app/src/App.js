@@ -1,12 +1,12 @@
 import React from 'react';
 import OverMij from './Pages/OverMij';
-import LiefdeApp from './Pages/Projecten/Liefde-App/LiefdeApp';
+import PianoApp from './Pages/Projecten/Piano-App/PianoApp';
 
 
 function App() {
   return (
     <div>
-      <LiefdeApp />
+      <PianoApp />
     </div>
   );
 }

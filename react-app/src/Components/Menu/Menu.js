@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.scss';
 
 //   menu op scherm tonen / sluiten n.a.v. huidige staat
@@ -25,64 +25,49 @@ function toggleMenu(x) {
     }
 }
 
-class Menu extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      toggle: false
-    }
-    this.menuStaat = this.menuStaat.bind(this);
-  }
-
-  //  zet de staat van het menu op 'true' of 'false' wanneer je erop klikt
-  menuStaat() {
-    this.setState((staat) => {
-      if (staat.toggle === false) {
-        toggleMenu(staat.toggle);
-        return {
-          toggle : true
-        }
-      }
-      else {
-        toggleMenu(staat.toggle);
-        return {
-          toggle : false
-        }
-      }
-    })
-  }
-
-  render() {
-    return (
-      <header>
-        <div className="menu-knop" onClick={this.menuStaat}>
-          <div className="menu-lijn"></div>
-          <div className="menu-lijn"></div>
-          <div className="menu-lijn"></div>
-        </div>
+function Menu() {
+  var [staat, setCount] = useState(false);
   
-        <nav className="menu">
-          <div className="menu-persoonlijk">
-            <div className="foto"></div>
-          </div>
-          <ul className="menu-navigatie">
-            <li className="nav-item huidige-pagina">
-              <a href="#" className="link">Home</a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="link">Werk</a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="link">Over mij</a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    )
+  function menuStaat() {
+    if (staat === false) {
+      toggleMenu(staat)
+      setCount(true)
+    }
+    else {
+      toggleMenu(staat)
+      setCount(false)
+    }
   }
+
+  return (
+    <header>
+      <div className="menu-knop" onClick={menuStaat}>
+        <div className="menu-lijn"></div>
+        <div className="menu-lijn"></div>
+        <div className="menu-lijn"></div>
+      </div>
+
+      <nav className="menu">
+        <div className="menu-persoonlijk">
+          <div className="foto"></div>
+        </div>
+        <ul className="menu-navigatie">
+          <li className="nav-item huidige-pagina">
+            <a href="#" className="link">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="link">Werk</a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="link">Over mij</a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
 
 export default Menu;

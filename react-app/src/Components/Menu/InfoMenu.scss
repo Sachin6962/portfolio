@@ -31,3 +31,10 @@
       height: 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .info-scherm {
+    padding: 25% 20%;
+    font-size: 1rem;
+  }
+}

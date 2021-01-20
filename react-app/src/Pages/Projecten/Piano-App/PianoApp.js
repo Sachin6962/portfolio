@@ -6,14 +6,13 @@ import InfoMenu from '../../../Components/Menu/InfoMenu';
 import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
 
+import geluid from './geluiden/witAa.mp3';
 
-//  checkt welke toets wordt gedrukt en speelt bijbehorend geluid af
 function speelGeluid() {
     var geluid = new Audio("../../../../public/geluiden/" + this.id + ".mp3");
     geluid.play();
     animatie(this.id);
 
-  //  geeft toets andere kleur wanneer je erop klikt
   function animatie(toets) {
     document.querySelector("#" + toets).classList.add("rood");
     setTimeout(function() {
@@ -22,13 +21,12 @@ function speelGeluid() {
   }
 }
 
-// var toetsen = document.querySelectorAll(".toets");
-  
-// for (let i = 0; i < toetsen.length; i++) {
-//   toetsen[i].addEventListener("click", speelGeluid);
-// }
-
 function PianoApp() {
+  function speelAf() {
+    var x = new Audio(geluid)
+    x.play()
+  }
+
   return (
     <div>
     <InfoMenu 
@@ -47,7 +45,7 @@ function PianoApp() {
         />
       </main>
       <div className="piano">
-        <div id="witAa" className="toets wit"></div>
+        <div id="witAa" className="toets wit" onClick={speelAf}></div>
         <div id="zwartAa" className="toets zwart"></div>
         <div id="witAb" className="toets wit"></div>
         <div id="zwartAb" className="toets zwart"></div>

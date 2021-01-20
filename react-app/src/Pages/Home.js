@@ -1,5 +1,5 @@
 import React from 'react';
-import './Voorpagina.scss';
+import './Home.scss';
 
 import Menu from '../Components/Menu/Menu';
 import KleineTitel from '../Components/Titels/KleineTitel';

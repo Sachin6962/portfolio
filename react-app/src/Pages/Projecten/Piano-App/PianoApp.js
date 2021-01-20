@@ -6,86 +6,88 @@ import InfoMenu from '../../../Components/Menu/InfoMenu';
 import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
 
-import geluid from './geluiden/witAa.mp3';
-
-function speelGeluid() {
-    var geluid = new Audio("../../../../public/geluiden/" + this.id + ".mp3");
-    geluid.play();
-    animatie(this.id);
-
-  function animatie(toets) {
-    document.querySelector("#" + toets).classList.add("rood");
-    setTimeout(function() {
-        document.querySelector("#" + toets).classList.remove("rood");
-    }, 100);
-  }
-}
-
-function PianoApp() {
-  function speelAf() {
-    var x = new Audio(geluid)
-    x.play()
+class PianoApp extends React.Component {
+  constructor() {
+    super();
+    this.state = {classReeks1 : 'toets wit'};
   }
 
-  return (
-    <div>
-    <InfoMenu 
-      beschrijving='Een piano app probeerd een fysieke piano digitaal 
-      te nabootsen. U kunt klikken op diverse toetsen om een liedje te 
-      spelen.'
-      tech='Technologieën gebruikt: Puur Javascript, Sass & React'
-    />
-    <Menu />
-      <main className='piano-app'>
-        <GroteTitel
-          naam='Online piano'
-        />
-        <KleineTitel
-          naam='Speel gerust uw favoriete liedjes'
-        />
-      </main>
-      <div className="piano">
-        <div id="witAa" className="toets wit" onClick={speelAf}></div>
-        <div id="zwartAa" className="toets zwart"></div>
-        <div id="witAb" className="toets wit"></div>
-        <div id="zwartAb" className="toets zwart"></div>
-        <div id="witAc" className="toets wit"></div>
-        <div id="zwartAc" className="toets zwart"></div>
-        <div id="witAd" className="toets wit"></div>
-        <div id="witAe" className="toets wit"></div>
-        <div id="zwartAd" className="toets zwart"></div>
-        <div id="witAf" className="toets wit"></div>
-        <div id="zwartAe" className="toets zwart"></div>
-        <div id="witAg" className="toets wit"></div>
+  toetsAnimatie = () => {
+    this.setState({classReeks1 : 'toets wit rood'})
+    setTimeout(() => {
+      this.setState({classReeks1 : 'toets wit'})
+    },100);
+  }
 
-        <div id="witBa" className="toets wit reeks2"></div>
-        <div id="zwartBa" className="toets zwart reeks2"></div>
-        <div id="witBb" className="toets wit reeks2"></div>
-        <div id="zwartBb" className="toets zwart reeks2"></div>
-        <div id="witBc" className="toets wit reeks2"></div>
-        <div id="zwartBc" className="toets zwart reeks2"></div>
-        <div id="witBd" className="toets wit reeks2"></div>
-        <div id="witBe" className="toets wit reeks2"></div>
-        <div id="zwartBd" className="toets zwart reeks2"></div>
-        <div id="witBf" className="toets wit reeks2"></div>
-        <div id="zwartBe" className="toets zwart reeks2"></div>
-        <div id="witBg" className="toets wit reeks2"></div>
+  speelAf = (obj) => {
+    var id = obj.target.id
+    var geluid = new Audio('geluiden/' + id + '.mp3')
+    geluid.play()
 
-        <div id="witCa" className="toets wit reeks3"></div>
-        <div id="zwartCa" className="toets zwart reeks3"></div>
-        <div id="witCb" className="toets wit reeks3"></div>
-        <div id="zwartCb" className="toets zwart reeks3"></div>
-        <div id="witCc" className="toets wit reeks3"></div>
-        <div id="zwartCc" className="toets zwart reeks3"></div>
-        <div id="witCd" className="toets wit reeks3"></div>
-        <div id="witCe" className="toets wit reeks3"></div>
-        <div id="zwartCd" className="toets zwart reeks3"></div>
-        <div id="witCf" className="toets wit reeks3"></div>
-        <div id="zwartCe" className="toets zwart reeks3"></div>
-        <div id="witCg" className="toets wit reeks3"></div>
+    this.toetsAnimatie()
+  }
+
+  render() {
+    return (
+      <div>
+      <InfoMenu 
+        beschrijving='Een piano app probeerd een fysieke piano digitaal
+        te nabootsen. U kunt klikken op diverse toetsen om een liedje te
+        spelen.'
+        tech='Technologieën gebruikt: Puur Javascript, Sass & React'
+      />
+      <Menu />
+        <main className='piano-app'>
+          <GroteTitel
+            naam='Online piano'
+          />
+          <KleineTitel
+            naam='Speel gerust uw favoriete liedjes'
+          />
+        </main>
+        <div className="piano">
+          <div id="witAa" className={this.state.classReeks1} onClick={this.speelAf}></div>
+          <div id="zwartAa" className="toets zwart" onClick={this.speelAf}></div>
+          <div id="witAb" className="toets wit" onClick={this.speelAf}></div>
+          <div id="zwartAb" className="toets zwart" onClick={this.speelAf}></div>
+          <div id="witAc" className="toets wit" onClick={this.speelAf}></div>
+          <div id="zwartAc" className="toets zwart" onClick={this.speelAf}></div>
+          <div id="witAd" className="toets wit" onClick={this.speelAf}></div>
+          <div id="witAe" className="toets wit" onClick={this.speelAf}></div>
+          <div id="zwartAd" className="toets zwart" onClick={this.speelAf}></div>
+          <div id="witAf" className="toets wit" onClick={this.speelAf}></div>
+          <div id="zwartAe" className="toets zwart" onClick={this.speelAf}></div>
+          <div id="witAg" className="toets wit" onClick={this.speelAf}></div>
+  
+          <div id="witBa" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="zwartBa" className="toets zwart reeks2" onClick={this.speelAf}></div>
+          <div id="witBb" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="zwartBb" className="toets zwart reeks2" onClick={this.speelAf}></div>
+          <div id="witBc" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="zwartBc" className="toets zwart reeks2" onClick={this.speelAf}></div>
+          <div id="witBd" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="witBe" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="zwartBd" className="toets zwart reeks2" onClick={this.speelAf}></div>
+          <div id="witBf" className="toets wit reeks2" onClick={this.speelAf}></div>
+          <div id="zwartBe" className="toets zwart reeks2" onClick={this.speelAf}></div>
+          <div id="witBg" className="toets wit reeks2" onClick={this.speelAf}></div>
+  
+          <div id="witCa" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="zwartCa" className="toets zwart reeks3" onClick={this.speelAf}></div>
+          <div id="witCb" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="zwartCb" className="toets zwart reeks3" onClick={this.speelAf}></div>
+          <div id="witCc" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="zwartCc" className="toets zwart reeks3" onClick={this.speelAf}></div>
+          <div id="witCd" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="witCe" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="zwartCd" className="toets zwart reeks3" onClick={this.speelAf}></div>
+          <div id="witCf" className="toets wit reeks3" onClick={this.speelAf}></div>
+          <div id="zwartCe" className="toets zwart reeks3" onClick={this.speelAf}></div>
+          <div id="witCg" className="toets wit reeks3" onClick={this.speelAf}></div>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default PianoApp;

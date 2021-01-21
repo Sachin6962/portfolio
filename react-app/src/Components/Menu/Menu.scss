@@ -6,7 +6,6 @@ header {
     width: 100%;
 }
 
-// menu knop
 .menu-knop {
   position: absolute;
   right: 35px;
@@ -23,20 +22,16 @@ header {
       transition: all 0.3s ease-out;
   }
 
-  // menu roteren naar een x
   &.close {
   transform: rotate(180deg);
 
   .menu-lijn {
-      // lijn 1 draaien
       &:nth-child(1) {
           transform: rotate(45deg) translate(5px, 5px);
       }
-      // lijn 2 verbergen
       &:nth-child(2) {
           opacity: 0;
       }
-      // lijn 3 draaien
       &:nth-child(3) {
           transform: rotate(-45deg) translate(7px, -6px);
       }
@@ -72,22 +67,19 @@ header {
       background: darken(rgba($hoofd-kleur, 0.9), 15);
       list-style: none;
       transform: translate3d(0, -100%, 0);
-      transition: all 0.2s ease-out;
+      transition: all 0.3s ease-out;
 
       &.show {
-          // in het scherm komen animatie
           transform: translate3d(0, 0, 0);
       }
   }
 
-  // linker kant
   &-persoonlijk {
       background: darken(rgba($hoofd-kleur, 0.9), 10);
       transform: translate3d(0, 100%, 0);
-      transition: all 0.2s ease-out;
+      transition: all 0.3s ease-out;
 
       &.show {
-          // in het scherm komen animatie
           transform: translate3d(0, 0, 0);
       }
 
@@ -124,7 +116,6 @@ header {
 
 
 @media screen and (max-width: 768px) {
-    //  menu re-stylen
     ul.menu-navigatie, div.menu-persoonlijk {
         float: none;
         width: 100%;

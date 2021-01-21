@@ -50,36 +50,38 @@ function bereken() {
   }
 }
 
-function LiefdeApp() {
-  return (
-    <div>
-    <InfoMenu 
-      beschrijving='Een zogeheten Love Calculator is een komische app die de 
-      liefde tussen twee personen berekent, uitgedrukt in een percentage. Maakt 
-      u zich zich geen zorgen, dit nummer is willekeurig gegenereerd.'
-      tech='Technologieën gebruikt: Puur Javascript, Sass & React'
-      />
-    <Menu />
-      <main className='liefde-app'>
-        <GroteTitel
-          naam='Liefde app'
+class LiefdeApp extends React.Component {
+  render() {
+    return (
+      <div>
+      <InfoMenu 
+        beschrijving='Een zogeheten Love Calculator is een komische app die de 
+        liefde tussen twee personen berekent, uitgedrukt in een percentage. Maakt 
+        u zich zich geen zorgen, dit nummer is willekeurig gegenereerd.'
+        tech='Technologieën gebruikt: Puur Javascript, Sass & React'
         />
-        <KleineTitel
-          naam='Druk op het hart om de liefde tussen 2 personen te berekenen'
-        />
-        <i className="fas fa-heart fa-10x" onClick={bereken}></i>
-
-        <div className="namen-container">
-          <div>
-            <input type="text" className="invoer1"/>
+      <Menu />
+        <main className='liefde-app'>
+          <GroteTitel
+            naam='Liefde app'
+          />
+          <KleineTitel
+            naam='Druk op het hart om de liefde tussen 2 personen te berekenen'
+          />
+          <i className="fas fa-heart fa-10x" onClick={bereken}></i>
+  
+          <div className="namen-container">
+            <div>
+              <input type="text" className="invoer1"/>
+            </div>
+            <div>
+              <input type="text" className="invoer2"/>
+            </div>
           </div>
-          <div>
-            <input type="text" className="invoer2"/>
-          </div>
-        </div>
-      </main>
-    </div>
-  )
+        </main>
+      </div>
+    )
+  }
 }
 
 export default LiefdeApp;

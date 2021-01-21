@@ -1,51 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './InfoMenu.scss';
 
-function toggleMenu(x) {
-  var infoKnop = document.querySelector(".info-knop");
-  var infoScherm = document.querySelector(".info-scherm");
-
-  if (x === false) {
-    infoKnop.classList.add('verhoogd1');
-    infoScherm.classList.add('open');
-    infoScherm.classList.add('verhoogd2');
-    document.querySelector(".menu-knop").classList.add("verlaagd");
+class InfoMenu extends React.Component {
+  constructor() {
+    super()
+    this.state = {menuStaat : false}
   }
-  else {
-    infoKnop.classList.remove('verhoogd1');
-    infoScherm.classList.remove('open');
-    infoScherm.classList.remove('verhoogd2');        
-    document.querySelector(".menu-knop").classList.remove("verlaagd");
-  }
-}
 
-function InfoMenu(props) {
-  var [staat, setCount] = useState(false);
+  menuKnop = React.createRef()
+  menuScherm = React.createRef()
   
-  function menuStaat() {
-    if (staat === false) {
-      toggleMenu(staat)
-      setCount(true)
+  toggleMenu = () => {
+    if (this.state.menuStaat === false) {
+      this.menuScherm.current.classList.add('open');
+      this.setState({menuStaat : true})
     }
     else {
-      toggleMenu(staat)
-      setCount(false)
+      this.menuScherm.current.classList.remove('open');
+      this.setState({menuStaat : false})
     }
   }
 
-  return (
-    <div>
-      <i className="fas fa-question-circle fa-2x info-knop" onClick={menuStaat}></i>
-
-      <div className="info-scherm">
-        <p>
-          {props.beschrijving}
-          <br/><br/>
-          {props.tech}
-        </p>
+  render() {
+    return (
+      <div>
+        <i className="fas fa-question-circle fa-2x info-knop" 
+        ref={this.menuKnop} onClick={this.toggleMenu}></i>
+  
+        <div className="info-scherm" ref={this.menuScherm}>
+          <p>
+            {this.props.beschrijving}
+            <br/><br/>
+            {this.props.tech}
+          </p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default InfoMenu;

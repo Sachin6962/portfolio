@@ -7,15 +7,12 @@ import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
 
 class PianoApp extends React.Component {
-  constructor() {
-    super();
-    this.state = {classReeks1 : 'toets wit'};
-  }
+  piano = React.createRef();
 
-  toetsAnimatie = () => {
-    this.setState({classReeks1 : 'toets wit rood'})
+  toetsAnimatie = (id) => {
+    this.piano.current.querySelector('#' + id).classList.add('rood')
     setTimeout(() => {
-      this.setState({classReeks1 : 'toets wit'})
+      this.piano.current.querySelector('#' + id).classList.remove('rood')
     },100);
   }
 
@@ -24,16 +21,15 @@ class PianoApp extends React.Component {
     var geluid = new Audio('geluiden/' + id + '.mp3')
     geluid.play()
 
-    this.toetsAnimatie()
+    this.toetsAnimatie(id)
   }
 
   render() {
     return (
       <div>
       <InfoMenu 
-        beschrijving='Een piano app probeerd een fysieke piano digitaal
-        te nabootsen. U kunt klikken op diverse toetsen om een liedje te
-        spelen.'
+        beschrijving='Een piano app probeerd een fysieke piano digitaal te
+        nabootsen. U kunt klikken op diverse toetsen om een liedje te spelen.'
         tech='Technologieën gebruikt: Puur Javascript, Sass & React'
       />
       <Menu />
@@ -45,8 +41,8 @@ class PianoApp extends React.Component {
             naam='Speel gerust uw favoriete liedjes'
           />
         </main>
-        <div className="piano">
-          <div id="witAa" className={this.state.classReeks1} onClick={this.speelAf}></div>
+        <div className="piano" ref={this.piano}>
+          <div id="witAa" className="toets wit" onClick={this.speelAf}></div>
           <div id="zwartAa" className="toets zwart" onClick={this.speelAf}></div>
           <div id="witAb" className="toets wit" onClick={this.speelAf}></div>
           <div id="zwartAb" className="toets zwart" onClick={this.speelAf}></div>

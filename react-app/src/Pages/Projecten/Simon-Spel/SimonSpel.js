@@ -15,10 +15,14 @@ class SimonSpel extends React.Component {
       gebruikerPatroon : [],
       startGame : true,
       sluitGame : true,
-      herleid : false,
-      level : 0
+      level : 0,
+      titel1 : 'Simon spel',
+      titel2 : 'Klik op het scherm om te beginnen',
+      class : 'simon-spel',
     }
   }
+
+  spel = React.createRef();
 
   checkAntwoord = (gebruikerInvoer) => {
     if (this.state.gebruikerPatroon[gebruikerInvoer] === this.state.gamePatroon[gebruikerInvoer]) {
@@ -28,24 +32,25 @@ class SimonSpel extends React.Component {
     }
     else {
       this.speelGeluid('fout')
-      document.querySelector("body").classList.add("game-over");
-      document.querySelector("h1").innerHTML = "Game-over!";
-      document.querySelector("h2").innerHTML = "Klik op het scherm om te herstarten";
-      setTimeout(function() {
-        document.querySelector("body").classList.remove("game-over");
+      this.setState({
+        titel1 : 'Game over!',
+        titel2 : 'Klik op het scherm om te herstarten',
+        class : 'simon-spel game-over'
+      })
+      setTimeout(() => {
+        this.setState({class : 'simon-spel'})
       }, 200);
       this.opnieuw();
     }
   }
   
   beginGame = () => {
-      if (this.state.herleid === true) {
-        this.state.herleid = false;
-      }
-      else if (this.state.startGame === true) {
-        this.state.sluitGame = false;
-        this.state.startGame = false;
-        document.querySelector("h2").innerHTML = "Het spel is begonnen..";
+      if (this.state.startGame === true) {
+        this.setState({
+          titel2 : 'Het spel is begonnen..',
+          sluitGame : false,
+          startGame : false
+        })
         this.voegToeAanPatroon();
       }
       else {
@@ -68,29 +73,31 @@ class SimonSpel extends React.Component {
   }
   
   voegToeAanPatroon = () => {
-    this.state.gebruikerPatroon = [];
+    this.setState({gebruikerPatroon : []})
     var willekeurigNummer = Math.floor(Math.random() * 4);
     var nieuweKleur = this.state.kleuren[willekeurigNummer];
     this.state.gamePatroon.push(nieuweKleur);
 
-    document.querySelector('#' + nieuweKleur).classList.add('gedrukt')
+    this.spel.current.querySelector('#' + nieuweKleur).classList.add('gedrukt')
     setTimeout(() => {
-      document.querySelector('#' + nieuweKleur).classList.remove('gedrukt')
+      this.spel.current.querySelector('#' + nieuweKleur).classList.remove('gedrukt')
     },100);
 
-    this.state.level++;
-    document.querySelector("h1").innerHTML = "Level " + this.state.level;
-
+    this.setState({level : this.state.level + 1}, () => {
+      this.setState({titel1 : 'Level ' + this.state.level})
+    })
+    
     this.speelGeluid(this.state.kleuren[willekeurigNummer]);
   }
   
   opnieuw = () => {
-    this.state.gamePatroon = [];
-    this.state.gebruikerPatroon = [];
-    this.state.startGame = true;
-    this.state.sluitGame = true;
-    this.state.herleid = true;
-    this.state.level = 0;
+    this.setState({
+      gamePatroon : [],
+      gebruikerPatroon : [],
+      startGame : true,
+      sluitGame : true,
+      level : 0,
+    })
   }
   
   speelGeluid = (naam) => {
@@ -99,9 +106,9 @@ class SimonSpel extends React.Component {
   }
   
   klikAnimatie = (huidigeKleur) => {
-    document.querySelector("#" + huidigeKleur).classList.add("gedrukt");
-    setTimeout(function () {
-      document.querySelector("#" + huidigeKleur).classList.remove("gedrukt");
+    this.spel.current.querySelector("#" + huidigeKleur).classList.add("gedrukt");
+    setTimeout(() => {
+      this.spel.current.querySelector("#" + huidigeKleur).classList.remove("gedrukt");
     }, 100);
   }
 
@@ -116,14 +123,14 @@ class SimonSpel extends React.Component {
           tech='Technologieën gebruikt: Puur Javascript, Sass & React'
         />
         <Menu />
-          <main className='simon-spel' onClick={this.beginGame}>
+          <main className={this.state.class} onClick={this.beginGame}>
             <GroteTitel
-              naam='Simon spel'
+              naam={this.state.titel1}
             />
             <KleineTitel
-              naam='Klik op het scherm om te beginnen'
+              naam={this.state.titel2}
             />
-            <div>
+            <div ref={this.spel}>
               <div>
                 <div type="button" id="groen" className="knop groen" onClick={this.gebruiker}></div>
                 <div type="button" id="rood" className="knop rood" onClick={this.gebruiker}></div>

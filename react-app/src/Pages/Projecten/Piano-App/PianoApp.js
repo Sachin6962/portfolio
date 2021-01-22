@@ -18,7 +18,7 @@ class PianoApp extends React.Component {
 
   speelAf = (obj) => {
     var id = obj.target.id
-    var geluid = new Audio('geluiden/' + id + '.mp3')
+    var geluid = new Audio('piano-geluiden/' + id + '.mp3')
     geluid.play()
 
     this.toetsAnimatie(id)

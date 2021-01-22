@@ -10,21 +10,19 @@ class SimonSpel extends React.Component {
   constructor() {
     super()
     this.state = {
-      
+      kleuren : ["rood", "blauw", "groen", "geel"],
+      gamePatroon : [],
+      gebruikerPatroon : [],
+      startGame : true,
+      sluitGame : true,
+      herleid : false,
+      level : 0
     }
   }
 
-  kleuren = ["rood", "blauw", "groen", "geel"];
-  gamePatroon = [];
-  gebruikerPatroon = [];
-  startGame = true;
-  sluitGame = true;
-  herleid = false;
-  level = 0;
-  
   checkAntwoord = (gebruikerInvoer) => {
-    if (this.gebruikerPatroon[gebruikerInvoer] === this.gamePatroon[gebruikerInvoer]) {
-      if (this.gebruikerPatroon.length === this.gamePatroon.length) {
+    if (this.state.gebruikerPatroon[gebruikerInvoer] === this.state.gamePatroon[gebruikerInvoer]) {
+      if (this.state.gebruikerPatroon.length === this.state.gamePatroon.length) {
         setTimeout(this.voegToeAanPatroon, 1500);
       }
     }
@@ -41,12 +39,12 @@ class SimonSpel extends React.Component {
   }
   
   beginGame = () => {
-      if (this.herleid === true) {
-        this.herleid = false;
+      if (this.state.herleid === true) {
+        this.state.herleid = false;
       }
-      else if (this.startGame === true) {
-        this.sluitGame = false;
-        this.startGame = false;
+      else if (this.state.startGame === true) {
+        this.state.sluitGame = false;
+        this.state.startGame = false;
         document.querySelector("h2").innerHTML = "Het spel is begonnen..";
         this.voegToeAanPatroon();
       }
@@ -56,13 +54,13 @@ class SimonSpel extends React.Component {
   }
   
   gebruiker = (obj) => {
-    if (this.sluitGame === false) {
+    if (this.state.sluitGame === false) {
       var gekozenKleur = obj.target.id;
-      this.gebruikerPatroon.push(gekozenKleur);
+      this.state.gebruikerPatroon.push(gekozenKleur);
   
       this.speelGeluid(gekozenKleur);
       this.klikAnimatie(gekozenKleur);
-      this.checkAntwoord(this.gebruikerPatroon.length - 1);
+      this.checkAntwoord(this.state.gebruikerPatroon.length - 1);
     }
     else {
       return;
@@ -70,28 +68,29 @@ class SimonSpel extends React.Component {
   }
   
   voegToeAanPatroon = () => {
-    this.gebruikerPatroon = [];
+    this.state.gebruikerPatroon = [];
     var willekeurigNummer = Math.floor(Math.random() * 4);
-    var nieuweKleur = this.kleuren[willekeurigNummer];
-    this.gamePatroon.push(nieuweKleur);
+    var nieuweKleur = this.state.kleuren[willekeurigNummer];
+    this.state.gamePatroon.push(nieuweKleur);
 
     document.querySelector('#' + nieuweKleur).classList.add('gedrukt')
     setTimeout(() => {
       document.querySelector('#' + nieuweKleur).classList.remove('gedrukt')
     },100);
-    this.level++;
-    document.querySelector("h1").innerHTML = "Level " + this.level;
 
-    this.speelGeluid(this.kleuren[willekeurigNummer]);
+    this.state.level++;
+    document.querySelector("h1").innerHTML = "Level " + this.state.level;
+
+    this.speelGeluid(this.state.kleuren[willekeurigNummer]);
   }
   
   opnieuw = () => {
-    this.gamePatroon = [];
-    this.gebruikerPatroon = [];
-    this.startGame = true;
-    this.sluitGame = true;
-    this.herleid = true;
-    this.level = 0;
+    this.state.gamePatroon = [];
+    this.state.gebruikerPatroon = [];
+    this.state.startGame = true;
+    this.state.sluitGame = true;
+    this.state.herleid = true;
+    this.state.level = 0;
   }
   
   speelGeluid = (naam) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import './LiefdeApp.scss';
 
 import Menu from '../../../Components/Menu/Menu';
@@ -6,51 +6,103 @@ import InfoMenu from '../../../Components/Menu/InfoMenu';
 import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
 
-function bereken() {
-  var willekeurigNummer;
-  var naam1;
-  var naam2;
+// function bereken() {
+//   var willekeurigNummer;
+//   var naam1;
+//   var naam2;
 
-  naam1 = document.querySelector(".invoer1").value;
-  naam2 = document.querySelector(".invoer2").value;
+//   naam1 = document.querySelector(".invoer1").value;
+//   naam2 = document.querySelector(".invoer2").value;
 
-  if (naam1 == "" || naam2 == "") {
-      document.querySelector("h2").innerHTML = "Voer a.u.b. eerst 2 namen in.";
-  }
-  else {
-    willekeurigNummer = Math.floor(Math.random() * 100 + 1);
+//   if (naam1 == "" || naam2 == "") {
+//       document.querySelector("h2").innerHTML = "Voer a.u.b. eerst 2 namen in.";
+//   }
+//   else {
+//     willekeurigNummer = Math.floor(Math.random() * 100 + 1);
 
-    document.querySelector("h2").innerHTML = "Aan het berekenen.. Een klein momentje..";
+//     document.querySelector("h2").innerHTML = "Aan het berekenen.. Een klein momentje..";
 
-    setTimeout(() => {
-      document.querySelector("h2").innerHTML = conclusie();
-      document.querySelector("h1").innerHTML = willekeurigNummer + "%";
-      resetWaarden();
-    }, 3000);
+//     setTimeout(() => {
+//       document.querySelector("h2").innerHTML = conclusie();
+//       document.querySelector("h1").innerHTML = willekeurigNummer + "%";
+//       resetWaarden();
+//     }, 3000);
 
-    function conclusie() {    
-      if (willekeurigNummer < 20) {
-          return naam1 + " en " + naam2 + " haten elkaar..";
-      }
-      else if (willekeurigNummer >= 20 && willekeurigNummer < 50) {
-          return naam1 + " en " + naam2 + " hebben een slechte relatie.";
-      }
-      else if (willekeurigNummer >= 50 && willekeurigNummer < 80) {
-          return naam1 + " en " + naam2 + " kunnen goed met elkaar opschieten";
-      }
-      else {
-          return naam1 + " en " + naam2 + " houden enorm veel van elkaar.";
-      }
-    }
+//     function conclusie() {    
+//       if (willekeurigNummer < 20) {
+//           return naam1 + " en " + naam2 + " haten elkaar..";
+//       }
+//       else if (willekeurigNummer >= 20 && willekeurigNummer < 50) {
+//           return naam1 + " en " + naam2 + " hebben een slechte relatie.";
+//       }
+//       else if (willekeurigNummer >= 50 && willekeurigNummer < 80) {
+//           return naam1 + " en " + naam2 + " kunnen goed met elkaar opschieten";
+//       }
+//       else {
+//           return naam1 + " en " + naam2 + " houden enorm veel van elkaar.";
+//       }
+//     }
 
-    function resetWaarden() {
-      document.querySelector(".invoer1").value = "";
-      document.querySelector(".invoer2").value = "";
-    }
-  }
-}
+//     function resetWaarden() {
+//       document.querySelector(".invoer1").value = "";
+//       document.querySelector(".invoer2").value = "";
+//     }
+//   }
+// }
 
 class LiefdeApp extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      titel1 : 'Liefde app',
+      titel2 : 'Druk op het hart om de liefde tussen 2 personen te berekenen'
+    }
+  }
+
+  input1 = React.createRef()
+  input2 = React.createRef()
+
+  bereken = () => {
+    var willekeurigNummer;
+    var naam1 = this.input1.current.value;
+    var naam2 = this.input2.current.value;
+
+    if (naam1 == "" || naam2 == "") {
+      this.setState({titel2 : 'Voer a.u.b. eerst 2 namen in.'})
+    }
+    else {
+      willekeurigNummer = Math.floor(Math.random() * 100 + 1);
+
+      this.setState({titel2 : 'Aan het berekenen.. Een klein momentje..'})
+
+      setTimeout(() => {
+        this.setState({titel1 : willekeurigNummer + '%'})
+        this.setState({titel2 : this.conclusie()})
+        this.resetWaarden();
+      }, 3000);
+
+      this.conclusie = () => {
+        if (willekeurigNummer < 20) {
+          return naam1 + " en " + naam2 + " haten elkaar..";
+        }
+        else if (willekeurigNummer >= 20 && willekeurigNummer < 50) {
+          return naam1 + " en " + naam2 + " hebben een slechte relatie.";
+        }
+        else if (willekeurigNummer >= 50 && willekeurigNummer < 80) {
+          return naam1 + " en " + naam2 + " kunnen goed met elkaar opschieten";
+        }
+        else {
+          return naam1 + " en " + naam2 + " houden enorm veel van elkaar.";
+        }
+      }
+
+      this.resetWaarden = () => {
+        this.input1.current.value = ''
+        this.input2.current.value = ''
+      }
+    }
+  }
+
   render() {
     return (
       <div>
@@ -63,19 +115,19 @@ class LiefdeApp extends React.Component {
         <Menu />
         <main className='liefde-app'>
           <GroteTitel
-            naam='Liefde app'
+            naam={this.state.titel1}
           />
           <KleineTitel
-            naam='Druk op het hart om de liefde tussen 2 personen te berekenen'
+            naam={this.state.titel2}
           />
-          <i className="fas fa-heart fa-10x" onClick={bereken}></i>
+          <i className="fas fa-heart fa-10x" onClick={this.bereken}></i>
   
           <div className="namen-container">
             <div>
-              <input type="text" className="invoer1"/>
+              <input type="text" className="invoer1" ref={this.input1}/>
             </div>
             <div>
-              <input type="text" className="invoer2"/>
+              <input type="text" className="invoer2" ref={this.input2}/>
             </div>
           </div>
         </main>

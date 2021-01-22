@@ -1,12 +1,12 @@
 import React from 'react';
 import OverMij from './Pages/OverMij';
-import LiefdeApp from './Pages/Projecten/Liefde-App/LiefdeApp';
+import SimonSpel from './Pages/Projecten/Simon-Spel/SimonSpel'
 
 
 function App() {
   return (
     <div>
-      <LiefdeApp />
+      <SimonSpel />
     </div>
   );
 }

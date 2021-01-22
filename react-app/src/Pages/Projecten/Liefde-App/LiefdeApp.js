@@ -54,13 +54,13 @@ class LiefdeApp extends React.Component {
   render() {
     return (
       <div>
-      <InfoMenu 
-        beschrijving='Een zogeheten Love Calculator is een komische app die de 
-        liefde tussen twee personen berekent, uitgedrukt in een percentage. Maakt 
-        u zich zich geen zorgen, dit nummer is willekeurig gegenereerd.'
-        tech='Technologieën gebruikt: Puur Javascript, Sass & React'
-        />
-      <Menu />
+        <InfoMenu 
+          beschrijving='Een zogeheten Love Calculator is een komische app die de 
+          liefde tussen twee personen berekent, uitgedrukt in een percentage. Maakt 
+          u zich zich geen zorgen, dit nummer is willekeurig gegenereerd.'
+          tech='Technologieën gebruikt: Puur Javascript, Sass & React'
+          />
+        <Menu />
         <main className='liefde-app'>
           <GroteTitel
             naam='Liefde app'

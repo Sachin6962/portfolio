@@ -4,30 +4,33 @@ import './InfoMenu.scss';
 class InfoMenu extends React.Component {
   constructor() {
     super()
-    this.state = {menuStaat : false}
+    this.state = {
+      menuStaat : false,
+      menuBody : ''
+    }
   }
-
-  menuKnop = React.createRef()
-  menuScherm = React.createRef()
   
   toggleMenu = () => {
     if (this.state.menuStaat === false) {
-      this.menuScherm.current.classList.add('open');
-      this.setState({menuStaat : true})
+      this.setState({
+        menuStaat : true,
+        menuBody : ' open'
+      })
     }
     else {
-      this.menuScherm.current.classList.remove('open');
-      this.setState({menuStaat : false})
+      this.setState({
+        menuStaat : false,
+        menuBody : ''
+      })
     }
   }
 
   render() {
     return (
       <div>
-        <i className="fas fa-question-circle fa-2x info-knop" 
-        ref={this.menuKnop} onClick={this.toggleMenu}></i>
+        <i className={`fas fa-question-circle fa-2x info-knop${this.state.menuBody}`} onClick={this.toggleMenu}></i>
   
-        <div className="info-scherm" ref={this.menuScherm}>
+        <div className={`info-scherm${this.state.menuBody}`}>
           <p>
             {this.props.beschrijving}
             <br/><br/>

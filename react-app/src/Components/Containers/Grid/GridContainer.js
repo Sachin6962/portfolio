@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './GridContainer.scss';
 
 function GridItem(props) {
   return (
-    <a href={props.href} target="_blank" className="grid-item">
+    <Link to={props.link} target="_blank" className="grid-item">
         <img src={props.imgUrl} alt="logo"/>
-    </a>
+    </Link>
   )
 }
 
@@ -13,27 +14,27 @@ function GridContainer(props) {
   return (
     <section className="grid-container">
       <GridItem 
-        href = {props.href1}
+        link = {props.link1}
         imgUrl = {props.imgUrl1}
       />
       <GridItem 
-        href = {props.href2}
+        link = {props.link2}
         imgUrl = {props.imgUrl2}
       />
       <GridItem 
-        href = {props.href3}
+        link = {props.link3}
         imgUrl = {props.imgUrl3}
       />
       <GridItem 
-        href = {props.href4}
+        link = {props.link4}
         imgUrl = {props.imgUrl4}
       />
       <GridItem 
-        href = {props.href5}
+        link = {props.link5}
         imgUrl = {props.imgUrl5}
       />
       <GridItem 
-        href = {props.href6}
+        link = {props.link6}
         imgUrl = {props.imgUrl6}
       />
     </section>

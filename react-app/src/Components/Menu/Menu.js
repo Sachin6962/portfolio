@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import './Menu.scss';
 
 class Menu extends React.Component {
@@ -42,17 +43,17 @@ class Menu extends React.Component {
             <div className="foto"></div>
           </div>
           <ul className={`menu-navigatie${this.state.menuBody}`}>
-            <li className="nav-item huidige-pagina">
-              <a href="#" className="link">Home</a>
+            <li className="nav-item">
+              <NavLink to='/' className="link" exact activeClassName='active' onClick={this.menuToggle}>Home</NavLink>
             </li>
             <li className="nav-item">
-              <a href="#" className="link">Werk</a>
+              <NavLink to='/Werk' className="link" onClick={this.menuToggle}>Werk</NavLink>
             </li>
             <li className="nav-item">
-              <a href="#" className="link">Over mij</a>
+              <NavLink to='/OverMij' className="link" onClick={this.menuToggle}>Over mij</NavLink>
             </li>
             <li className="nav-item">
-              <a href="#" className="link">Contact</a>
+              <NavLink to='/Contact' className="link" onClick={this.menuToggle}>Contact</NavLink>
             </li>
           </ul>
         </nav>

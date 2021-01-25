@@ -1,7 +1,6 @@
 import React from 'react';
 import './OverMij.scss';
 
-import Menu from '../Components/Menu/Menu';
 import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
 import GridContainer2 from '../Components/Containers/Grid/GridContainer2';
@@ -34,16 +33,15 @@ function berekenLeeftijd() {
 
 function OverMij() {
   return (
-    <div>
-      <Menu />
+    <div className='over-mij'>
         <main>
           <GroteTitel 
             naam='Over mij'
           />
           <div className="intro">
             <img src={foto} alt="foto" className="item1"/>
-            <div class="item2">
-              <h2><span class="tweede-kleur spacing">INTRODUCTIE</span></h2>
+            <div className="item2">
+              <h2><span className="tweede-kleur spacing">INTRODUCTIE</span></h2>
               <p>Mijn naam is Sachin Kumar, ik ben {berekenLeeftijd()} jaar oud en woon ik Schiedam. 
               Ik ben afgestudeerd als Front-end Web Developer en heb al de diploma Graphic Design op 
               zak. Al sinds mijn jeugd heb ik een groot gevoel voor creativiteit en nauwkeurigheid. 

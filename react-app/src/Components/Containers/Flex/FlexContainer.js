@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './FlexContainer.scss';
 
 function FlexItem(props) {
   return (
-    <a href={props.href} target="_blank" className="flex-item">
+    <Link to={props.link} target="_blank" className="flex-item">
       <img src={props.imgUrl} alt=""/>
-    </a>
+    </Link>
   )
 }
 
@@ -13,15 +14,15 @@ function FlexContainer(props) {
   return (
     <section className='flex-container'>
         <FlexItem 
-          href={props.href1}
+          link={props.link1}
           imgUrl={props.imgUrl1}
         />
         <FlexItem 
-          href={props.href2}
+          link={props.link2}
           imgUrl={props.imgUrl2}
         />
         <FlexItem 
-          href={props.href3}
+          link={props.link3}
           imgUrl={props.imgUrl3}
         />
     </section>

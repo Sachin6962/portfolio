@@ -13,7 +13,7 @@ function FlexItem(props) {
 
 function FlexContainer3(props) {
   return (
-    <div className="flex-container">
+    <div className="flex-container3">
       <FlexItem
         imgUrl={props.imgUrl1}
         titel={props.titel1}

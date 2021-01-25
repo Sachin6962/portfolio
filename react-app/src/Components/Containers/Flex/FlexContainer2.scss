@@ -1,6 +1,6 @@
 @import '../../../algemeen';
 
-.flex-container {
+.flex-container2 {
   display: flex;
   max-width: 1280px;
   margin: 20px auto 0 auto;
@@ -32,7 +32,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .flex-container {
+    .flex-container2 {
         flex-direction: column;
     }
 }

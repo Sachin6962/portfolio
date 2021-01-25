@@ -13,7 +13,7 @@ function GridItem(props) {
 function GridContainer2(props) {
   return (
     <section>
-      <div className="grid-container">
+      <div className="grid-container2">
         <GridItem 
           icoon = {props.icoon1}
           text = {props.text1}

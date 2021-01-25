@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Menu from '../Components/Menu/Menu';
 import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
 import FlexContainer from '../Components/Containers/Flex/FlexContainer';
@@ -27,7 +26,6 @@ import site3 from '../img/werk/webdesign/sportinstituut.jpg';
 function Werk() {
   return (
     <div>
-      <Menu />
       <main>
         <GroteTitel
           naam='Mijn werk'
@@ -36,50 +34,50 @@ function Werk() {
           naam='JAVASCRIPT PROJECTEN'
         />
         <FlexContainer 
-          href1='#'
+          link1='/LiefdeApp'
           imgUrl1={project1}
-          href2='#'
+          link2='/PianoApp'
           imgUrl2={project2}
-          href3='#'
+          link3='/SimonSpel'
           imgUrl3={project3}
         />
         <RodeTitel
           naam='ILLUSTRATIEF'
         />
         <FlexContainer 
-          href1='#'
           imgUrl1={illustratie1}
-          href2='#'
+          link1={illustratie1}
           imgUrl2={illustratie2}
-          href3='#'
+          link2={illustratie2}
           imgUrl3={illustratie3}
+          link3={illustratie3}
         />
         <RodeTitel
           naam='LOGO DESIGN'
         />
         <GridContainer 
-          href1='#'
+          link1={logo1}
           imgUrl1={logo1}
-          href2='#'
+          link2={logo2}
           imgUrl2={logo2}
-          href3='#'
+          link3={logo3}
           imgUrl3={logo3}
-          href4='#'
+          link4={logo4}
           imgUrl4={logo4}
-          href5='#'
+          link5={logo5}
           imgUrl5={logo5}
-          href6='#'
+          link6={logo6}
           imgUrl6={logo6}
         />
         <RodeTitel
           naam='WEBDESIGN'
         />
         <FlexContainer 
-          href1='#'
+          link1={site1}
           imgUrl1={site1}
-          href2='#'
+          link2={site2}
           imgUrl2={site2}
-          href3='#'
+          link3={site3}
           imgUrl3={site3}
         />
       </main>

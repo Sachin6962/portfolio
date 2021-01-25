@@ -22,7 +22,7 @@ function FlexItem2(props) {
 
 function FlexContainer2(props) {
   return (
-    <section className='flex-container'>
+    <section className='flex-container2'>
       <FlexItem1
         imgUrl={props.imgUrl}
       />

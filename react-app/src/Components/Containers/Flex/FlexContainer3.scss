@@ -1,4 +1,4 @@
-.flex-container {
+.flex-container3 {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .flex-container {
+  .flex-container3 {
     flex-direction: column;
     align-items: center;
 

@@ -1,56 +1,58 @@
 @import '../algemeen';
 
-h2 {
-  padding: 0;
-}
-
-.intro {
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
-
+.over-mij {
+  h2 {
+    padding: 0;
+  }
   
-  .item1 {
-      max-height: 400px;
-      flex: 0 0 auto;
-      border: 3px solid red;
-      margin: 10px;
+  .intro {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+  
+    
+    .item1 {
+        max-height: 400px;
+        flex: 0 0 auto;
+        border: 3px solid red;
+        margin: 10px;
+    }
+    .item2 {
+        margin: 10px;
+        
+        p {
+            font-size: 1.25rem;
+        }
+    }
   }
-  .item2 {
-      margin: 10px;
-      
-      p {
-          font-size: 1.25rem;
+  
+  .schuine-container {
+    width: 100%;
+    background: rgb(37, 37, 37);
+    transform: skew(0, -2deg);
+  
+    .content {
+      padding: 0 4rem;
+      transform: skew(0, 2deg);
+      margin: 0 auto;
+      max-width: 1280px;
+  
+      h2 {
+        padding-top: 50px;
       }
+  
+      .flex-container2:last-child {
+        padding-bottom: 50px;
+      }
+    }
   }
-}
-
-.schuine-container {
-  width: 100%;
-  background: rgb(37, 37, 37);
-  transform: skew(0, -2deg);
-
-  .content {
-    padding: 0 4rem;
-    transform: skew(0, 2deg);
-    margin: 0 auto;
+  
+  .persoonlijk {
     max-width: 1280px;
-
-    h2 {
-      padding-top: 50px;
-    }
-
-    .flex-container:last-child {
-      padding-bottom: 50px;
-    }
+    margin: 50px auto 100px auto;
+    padding: 0 4rem;
+  
   }
-}
-
-.persoonlijk {
-  max-width: 1280px;
-  margin: 50px auto 100px auto;
-  padding: 0 4rem;
-
 }
 
 @media screen and (max-width: 768px) {

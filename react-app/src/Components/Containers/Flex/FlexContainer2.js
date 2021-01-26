@@ -4,7 +4,7 @@ import './FlexContainer2.scss';
 function FlexItem1(props) {
   return (
     <div className="flex-item1">
-      <img src={props.imgUrl}/>
+      <img src={props.imgUrl} alt=''/>
     </div>
   )
 }

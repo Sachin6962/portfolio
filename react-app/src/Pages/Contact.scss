@@ -31,13 +31,15 @@
 
 
 @media screen and (max-width: 768px) {
-  .info-container {
-    flex-direction: column;
-    margin-top: 30px;
-    align-items: center;
-
-    .flex-item {
-        margin: 10px 0;
+  .contact {
+    .info-container {
+      flex-direction: column;
+      margin-top: 30px;
+      align-items: center;
+  
+      .flex-item {
+          margin: 10px 0;
+      }
     }
   }
 }

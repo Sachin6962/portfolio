@@ -12,10 +12,10 @@ function Voorpagina() {
             naam='Front-end Web Developer & Graphic Designer'
           />
           <div className="iconen">
-              <a href="https://linkedin.com/in/sachin-kumar-003336190" target="_blank">
+              <a href="https://linkedin.com/in/sachin-kumar-003336190" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin fa-2x"></i>
               </a>
-              <a href="https://github.com/Sachin6962/portfolio" target="_blank">
+              <a href="https://github.com/Sachin6962/portfolio" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github fa-2x"></i>
               </a>
           </div>

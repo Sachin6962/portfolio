@@ -1,7 +1,6 @@
 import React from 'react';
 import './SimonSpel.scss';
 
-import Menu from '../../../Components/Menu/Menu';
 import InfoMenu from '../../../Components/Menu/InfoMenu';
 import GroteTitel from '../../../Components/Titels/GroteTitel';
 import KleineTitel from '../../../Components/Titels/KleineTitel';
@@ -114,7 +113,7 @@ class SimonSpel extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.state.class}>
         <InfoMenu 
           beschrijving=' The Simon Game is een spel waarbij de computer
           stap voor stap een patroon genereerd. Dit patroon moet u goed
@@ -122,8 +121,7 @@ class SimonSpel extends React.Component {
           goede volgorde.'
           tech='Technologieën gebruikt: Puur Javascript, Sass & React'
         />
-        <Menu />
-          <main className={this.state.class} onClick={this.beginGame}>
+          <main onClick={this.beginGame}>
             <GroteTitel
               naam={this.state.titel1}
             />

@@ -4,7 +4,7 @@ import './FlexContainer3.scss';
 function FlexItem(props) {
   return (
     <div className="flex-item">
-      <img src={props.imgUrl}/>
+      <img src={props.imgUrl} alt=''/>
       <h3>{props.titel}</h3>
       <p>{props.info}</p>
     </div>

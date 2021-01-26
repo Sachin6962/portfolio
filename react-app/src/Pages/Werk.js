@@ -1,4 +1,5 @@
 import React from 'react';
+import './Werk.scss';
 
 import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
@@ -25,7 +26,7 @@ import site3 from '../img/werk/webdesign/sportinstituut.jpg';
 
 function Werk() {
   return (
-    <div>
+    <div className='werk-pagina'>
       <main>
         <GroteTitel
           naam='Mijn werk'

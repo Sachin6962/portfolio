@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Switch, Route} from 'react-router-dom'
+import {HashRouter, BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import Menu from './Components/Menu/Menu';
 import Home from './Pages/Home';
@@ -14,19 +14,19 @@ import SimonSpel from './Pages/Projecten/Simon-Spel/SimonSpel'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Menu />
       <Switch>
         <Route component={Home} path='/' exact/>
         <Route component={Werk} path='/Werk'/>
         <Route component={OverMij} path='/OverMij'/>
         <Route component={Contact} path='/Contact'/>
-
+        
         <Route component={LiefdeApp} path='/LiefdeApp'/>
         <Route component={PianoApp} path='/PianoApp'/>
         <Route component={SimonSpel} path='/SimonSpel'/>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

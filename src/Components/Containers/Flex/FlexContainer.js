@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './FlexContainer.scss';
 
 function FlexItem(props) {
   return (
-    <Link to={props.link} target="_blank" className="flex-item">
+    <NavLink to={props.link} target="_blank" className="flex-item">
       <img src={props.imgUrl} alt=""/>
-    </Link>
+    </NavLink>
   )
 }
 

@@ -1,1 +1,1 @@
-Bezig met website omzetten naar react applicatie yeahh
+Bekijk met gerust de code van mijn portfolio website!

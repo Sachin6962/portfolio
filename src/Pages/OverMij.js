@@ -94,7 +94,7 @@ function OverMij() {
           />
           <FlexContainer2
             imgUrl={foto3}
-            titel='Vulploegmedewerker'
+            titel='Vulploeg medewerker'
             info=' 2015-2017, bij Albert Heijn '
             uitleg=" Als vulploegmedewerker voerde ik taken uit als het lossen / laden / vullen 
             van producten en het schoonhouden van de winkel. Werken bij de AH was een simpele 

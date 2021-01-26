@@ -11,33 +11,33 @@ $toetsBreedte: 50px;
 
   .piano {
     margin-top: 100px;
-      display: flex;
-      justify-content: center;
-  
-      // om sass variable te kunnen gebruiken in een calc() moet je het binnen
-      // een #{} zetten, anders wordt hij niet gecompileerd
-      .toets {
-          height: calc(#{$toetsBreedte} * 4.25);
-      }
-  
-      .wit {
-          width: $toetsBreedte;
-          background-color: white;
-          border: calc(#{$toetsBreedte} * 0.04) solid $derde-kleur;
-      }
-      .zwart {
-          width: calc(#{$toetsBreedte} / 2);
-          height: calc(#{$toetsBreedte} * 2.5);
-          background-color: rgb(61, 61, 61);
-          border: calc(#{$toetsBreedte} * 0.08) solid $derde-kleur;
-          border-top: 4px solid $derde-kleur;
-          margin-left: calc(#{$toetsBreedte} / -4);
-          margin-right: calc(#{$toetsBreedte} / -4);
-          z-index: 1;
-      }
-      .rood {
-          background-color: red;
-      }
+    display: flex;
+    justify-content: center;
+
+    // om sass variable te kunnen gebruiken in een calc() moet je het binnen
+    // een #{} zetten, anders wordt hij niet gecompileerd
+    .toets {
+        height: calc(#{$toetsBreedte} * 4.25);
+    }
+
+    .wit {
+        width: $toetsBreedte;
+        background-color: white;
+        border: calc(#{$toetsBreedte} * 0.04) solid $derde-kleur;
+    }
+    .zwart {
+        width: calc(#{$toetsBreedte} / 2);
+        height: calc(#{$toetsBreedte} * 2.5);
+        background-color: rgb(61, 61, 61);
+        border: calc(#{$toetsBreedte} * 0.08) solid $derde-kleur;
+        border-top: 4px solid $derde-kleur;
+        margin-left: calc(#{$toetsBreedte} / -4);
+        margin-right: calc(#{$toetsBreedte} / -4);
+        z-index: 1;
+    }
+    .rood {
+        background-color: red;
+    }
   }
 }
 
@@ -69,7 +69,7 @@ de width van de .wit class wordt opgeslagen in een sass variabel
 }
 
 @media screen and (max-width: 768px) {
-  .piano {
+  .piano-app .piano {
     margin-top: 0;
   }
 

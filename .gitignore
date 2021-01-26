@@ -1,1 +1,3 @@
-react-app/
+/build
+/node_modules
+.eslintcache

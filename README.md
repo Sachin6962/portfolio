@@ -1,4 +1,4 @@
-Bekijk met gerust de code van mijn portfolio website!
+Mijn oude portfolio website, gebouwd in puur Javascript, SCSS & HTML.
 
 In de /dist folder staan de bestanden die daadwerkelijk naar de server worden geüpload.
 

@@ -1,5 +1,5 @@
-Bekijk met gerust de code van mijn portfolio website!
+Welkom! Bekijk met gerust de code van mijn portfolio website!
 
-In de /dist folder staan de bestanden die daadwerkelijk naar de server worden geüpload.
+Technologieën gebruikt: ReactJS & Sass. Verder natuurlijk ook puur Javascript, CSS3 & HTML5.
 
-In de /scss folder staan de Sass bestanden, welke worden 'compiled' naar CSS bestanden in de /dist folder.
+Bekijk ook eens de code in de branch 'oude-portfolio'. Dit was een oudere variant van deze website, gebouwd in enkel JS, SCSS & HTML (geen React).

@@ -1,0 +1,59 @@
+@import '../../../algemeen';
+
+.simon-spel {
+  text-align: center;
+  height: 100vh;
+
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .knop {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    }
+
+    .rood {
+        background-color: red;
+    }
+
+    .groen {
+        background-color: green;
+    }
+
+    .blauw {
+        background-color: rgb(0, 140, 255);
+    }
+
+    .geel {
+        background-color: yellow;
+    }
+
+    .gedrukt {
+        box-shadow: 0 0 20px white;
+        background-color: grey;
+    }
+}
+
+.game-over {
+    background-color: rgb(155, 0, 0);
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 768px) {
+    .simon-spel .knop {
+        margin: 10px;
+        height: 90px;
+        width: 90px;
+        border-radius: 20%;
+    }
+}

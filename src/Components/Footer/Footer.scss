@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  background: rgb(0, 0, 0);
+
+  .witte-lijn {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+  }
+
+  p {
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 35px 4rem 0;
+      font-size: 1.25rem;
+  }
+}

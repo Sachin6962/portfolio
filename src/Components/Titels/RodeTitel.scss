@@ -1,0 +1,12 @@
+@import '../../algemeen';
+
+.rode-titel {
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .rode-titel {
+    padding: 0;
+  }
+}

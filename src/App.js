@@ -14,7 +14,7 @@ import SimonSpel from './Pages/Projecten/Simon-Spel/SimonSpel'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Menu />
       <Switch>
         <Route component={Home} path='/' exact/>
@@ -26,7 +26,7 @@ function App() {
         <Route component={PianoApp} path='/PianoApp'/>
         <Route component={SimonSpel} path='/SimonSpel'/>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

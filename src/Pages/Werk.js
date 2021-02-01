@@ -19,8 +19,8 @@ import logo3 from '../img/werk/logo/logo3.jpg';
 import logo4 from '../img/werk/logo/logo4.jpg';
 import logo5 from '../img/werk/logo/logo5.jpg';
 import logo6 from '../img/werk/logo/logo6.jpg';
-import site1 from '../img/werk/webdesign/by-dennis.jpg';
-import site2 from '../img/werk/webdesign/rotgans.png';
+import site1 from '../img/werk/webdesign/sport.jpg';
+import site2 from '../img/werk/webdesign/by-dennis.jpg';
 import site3 from '../img/werk/webdesign/sportinstituut.jpg';
 
 
@@ -73,7 +73,7 @@ function Werk() {
         <RodeTitel
           naam='WEBDESIGN'
         />
-        <FlexContainer 
+        <FlexContainer
           link1={site1}
           imgUrl1={site1}
           link2={site2}

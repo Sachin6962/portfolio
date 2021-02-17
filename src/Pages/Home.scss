@@ -23,10 +23,10 @@
   .iconen {
     margin-top: 1rem;
     a {
-        padding: 0.4rem;
+      padding: 0.4rem;
+      transition: $hover-effect;
         &:hover {
-            color: $tweede-kleur;
-            transition: all 0.3s ease-out;
+          color: $tweede-kleur;
         }
     }
   }

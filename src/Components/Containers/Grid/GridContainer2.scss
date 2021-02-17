@@ -9,19 +9,19 @@
   margin: 0 auto;
   
   .grid-item {
-      text-align: center;
+    text-align: center;
+    transition: $hover-effect;
 
-      span {
-        font-size: 1.1rem;
-      }
+    span {
+      font-size: 1.1rem;
+    }
 
-      i {
-          margin-bottom: 20px;
-      }
-      &:hover {
-              color: $tweede-kleur;
-              transition: all 0.3s ease-out;
-          }
+    i {
+      margin-bottom: 20px;
+    }
+    &:hover {
+      color: $tweede-kleur;
+    }
   }
 
   i {

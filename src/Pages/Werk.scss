@@ -1,7 +1,55 @@
+@import '../algemeen';
+
+.werk-keuze-pagina {
+  display: flex;
+
+  .blok {
+    text-align: center;
+    width: 50%;
+    height: 100vh;
+    cursor: pointer;
+    position: relative;
+
+    img {
+      filter: brightness(7%);
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: $hover-effect;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      padding: 5%;
+
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  .blok1:hover img, .blok2:hover img {
+    filter: brightness(30%);
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .werk-pagina {
-    h1 {
-      margin: 0 0 60px 0;
+  .werk-keuze-pagina {
+    flex-direction: column;
+
+    .blok {
+      height: 50vh;
+      width: 100%;
+      
+      .text-container h1 {
+        font-size: 3rem;
+        margin: 0
+      }
+      .text-container h2 {
+        display: none;
+      }
     }
   }
 }

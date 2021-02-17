@@ -15,7 +15,7 @@
     .flex-item {
         border: 2px solid white;
         padding: 15px;
-        transition: all 0.2s ease-in;
+        transition: $hover-effect;
   
         h3 {
             margin-top: 10px;

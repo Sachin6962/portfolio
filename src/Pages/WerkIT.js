@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './WerkIT.scss';
 
 import GroteTitel from '../Components/Titels/GroteTitel';
@@ -6,23 +7,41 @@ import RodeTitel from '../Components/Titels/RodeTitel';
 import FlexContainer from '../Components/Containers/Flex/FlexContainer';
 import Footer from '../Components/Footer/Footer';
 
-import project1 from '../img/werk/projecten/liefde-app.png';
-import project2 from '../img/werk/projecten/piano-app.png';
-import project3 from '../img/werk/projecten/simon-spel.png';
-import site1 from '../img/werk/webdesign/sport.jpg';
-import site2 from '../img/werk/webdesign/by-dennis.jpg';
-import site3 from '../img/werk/webdesign/sportinstituut.jpg';
+import test from '../img/it-werk/coming-soon.jpg';
+import project1 from '../img/it-werk/liefde-app.png';
+import project2 from '../img/it-werk/piano-app.png';
+import project3 from '../img/it-werk/simon-spel.png';
+import site1 from '../img/it-werk/sport.jpg';
+import site2 from '../img/it-werk/by-dennis.jpg';
+import site3 from '../img/it-werk/sportinstituut.jpg';
 
+
+function Container1(props) {
+  return (
+    <section className='container1'>
+      <Link to={props.link} target="_blank" className="flex-item">
+        <img src={props.src} alt=""/>
+      </Link>
+    </section>
+  )
+}
 
 function WerkIT() {
   return (
-    <div className='werk-pagina'>
+    <div className='it-werk-pagina'>
       <main>
         <GroteTitel
           naam='IT werk'
         />
         <RodeTitel
-          naam='JAVASCRIPT PROJECTEN'
+          naam='WEBSITES'
+        />
+        <Container1
+          link={test}
+          src={test}
+        />
+        <RodeTitel
+          naam='KLEINE PROJECTEN'
         />
         <FlexContainer 
           link1='/LiefdeApp'

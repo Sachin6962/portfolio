@@ -1,5 +1,5 @@
 .it-werk-pagina {
-  .container1 {
+  .container1, .container2 {
     display: flex;
     justify-content: space-between;
     margin: 20px 0px;
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 768px) {
   .it-werk-pagina {
-    .container1 {
+    .container1, .container2 {
       flex-direction: column;
       align-items: center;
   

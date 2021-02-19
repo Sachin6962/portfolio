@@ -6,7 +6,7 @@ import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
 import Footer from '../Components/Footer/Footer';
 
-import eindproject from '../img/grafisch-werk/eindopdracht1.jpg';
+import eindproject from '../img/grafisch-werk/eindproject1.0.jpg';
 import illustratie1 from '../img/grafisch-werk/illustratie1.jpg';
 import illustratie2 from '../img/grafisch-werk/illustratie2.jpg';
 import illustratie3 from '../img/grafisch-werk/illustratie3.jpg';
@@ -85,8 +85,8 @@ function Container4(props) {
       <Link to={props.link1} target="_blank" className="flex-item">
         <img src={props.src1} alt=""/>
       </Link>
-      <i class="fas fa-arrow-right fa-3x flex-item pijl1"></i>
-      <i class="fas fa-arrow-down fa-3x flex-item pijl2"></i>
+      <i className="fas fa-arrow-right fa-3x flex-item pijl1"></i>
+      <i className="fas fa-arrow-down fa-3x flex-item pijl2"></i>
       <Link to={props.link2} target="_blank" className="flex-item">
         <img src={props.src2} alt=""/>
       </Link>
@@ -103,10 +103,10 @@ function WerkGrafisch() {
           naam='Grafisch werk'
         />
         <RodeTitel
-          naam='MBO EINDPROJECT'
+          naam='MBO EXAMEN PROJECT'
         />
         <Container1
-          link={eindproject}
+          link='/EindprojectMBO'
           src={eindproject}
         />
         <RodeTitel

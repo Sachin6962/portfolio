@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 
 import WerkIT from './Pages/WerkIT';
 import WerkGrafisch from './Pages/WerkGrafisch';
+import EindprojectMBO from './Pages/EindprojectMBO';
 
 import LiefdeApp from './Pages/Projecten/Liefde-App/LiefdeApp'
 import PianoApp from './Pages/Projecten/Piano-App/PianoApp'
@@ -27,6 +28,7 @@ function App() {
 
         <Route component={WerkIT} path='/WerkIT'/>
         <Route component={WerkGrafisch} path='/WerkGrafisch'/>
+        <Route component={EindprojectMBO} path='/EindprojectMBO'/>
         
         <Route component={LiefdeApp} path='/LiefdeApp'/>
         <Route component={PianoApp} path='/PianoApp'/>

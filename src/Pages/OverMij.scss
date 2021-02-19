@@ -1,32 +1,23 @@
 @import '../algemeen';
 
-.over-mij-pagina {
-  h1 {
-    margin: 0 0 60px 0;
-  }
-
-  h2 {
-    padding: 0;
-  }
-  
+.over-mij-pagina {  
   .intro {
     display: flex;
     margin-top: 50px;
     justify-content: center;
   
-    
     .item1 {
-        max-height: 400px;
-        flex: 0 0 auto;
-        border: 3px solid red;
-        margin: 10px;
+      max-height: 400px;
+      flex: 0 0 auto;
+      border: 3px solid $tweede-kleur;
+      margin: 10px;
     }
     .item2 {
-        margin: 10px;
-        
-        p {
-            font-size: 1.25rem;
-        }
+      margin: 10px;
+
+      p {
+        font-size: 1.25rem;
+      }
     }
   }
   
@@ -40,12 +31,72 @@
       transform: skew(0, 2deg);
       margin: 0 auto;
       max-width: 1280px;
+
+      .container2 {
+        display: grid;
+        justify-content: space-between;
+        row-gap: 50px;
+        padding: 20px 0px;
+        max-width: 1280px;
+        margin: 0 auto;
+        
+        .grid-item {
+          text-align: center;
+          transition: $hover-effect;
+      
+          span {
+            font-size: 1.25rem;
+          }
+      
+          i {
+            margin-bottom: 20px;
+          }
+          &:hover {
+            color: $tweede-kleur;
+          }
+        }
+      
+        i {
+            margin: 10px;
+        }
+      }
+
+      .container3 {
+        display: flex;
+        max-width: 1280px;
+        margin: 20px auto 0 auto;
+      
+        .flex-item1 {
+          position: relative;
+          flex: 0 1 50%;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .flex-item2 {
+          flex: 0 1 50%;
+          background: $derde-kleur;
+          transition: all 0.3s ease-out;
+    
+          div {
+            margin: 0;
+            padding: 2rem;
+  
+            p {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
   
       h2 {
         padding-top: 50px;
       }
   
-      .flex-container2:last-child {
+      .container3:last-child {
         padding-bottom: 50px;
       }
     }
@@ -56,16 +107,71 @@
     margin: 50px auto 100px auto;
     padding: 0 4rem;
   
+    .container4 {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin: 20px 0;
+  
+      .flex-item {
+          flex: 0 1 250px;
+          margin: 0 10px;
+  
+          p {
+              font-size: 1.25rem;
+          }
+  
+          img {
+              width: 100px;
+              height: auto;
+              margin-bottom: 20px;
+          }
+      }
+  }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .container2 {
+      grid-template-columns:repeat(4, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .intro {
-    flex-direction: column;
-    align-items: center;
+  .over-mij-pagina {
+    .intro {
+      flex-direction: column;
+      align-items: center;
+  
+      .item1 {
+          max-width: 200px;
+      }
+    }
 
-    .item1 {
-        max-width: 200px;
+    .container2 {
+      grid-template-columns:repeat(2, 1fr);
+    }
+
+    .schuine-container .content .container3 {
+      flex-direction: column;
+
+      .flex-item2 div p {
+        font-size: 1.1rem;
+      }
+    }
+
+    .persoonlijk .container4 {
+      flex-direction: column;
+      align-items: center;
+  
+      .flex-item {
+          max-width: 300px;
+          padding-bottom: 20px;
+
+          p {
+            font-size: 1.1rem;
+          }
+      }
     }
   }
 }

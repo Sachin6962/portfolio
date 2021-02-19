@@ -4,7 +4,6 @@ import './WerkIT.scss';
 
 import GroteTitel from '../Components/Titels/GroteTitel';
 import RodeTitel from '../Components/Titels/RodeTitel';
-import FlexContainer from '../Components/Containers/Flex/FlexContainer';
 import Footer from '../Components/Footer/Footer';
 
 import test from '../img/it-werk/coming-soon.jpg';
@@ -21,6 +20,22 @@ function Container1(props) {
     <section className='container1'>
       <Link to={props.link} target="_blank" className="flex-item">
         <img src={props.src} alt=""/>
+      </Link>
+    </section>
+  )
+}
+
+function Container2(props) {
+  return (
+    <section className='container2'>
+      <Link to={props.link1} target="_blank" className="flex-item">
+        <img src={props.src1} alt=""/>
+      </Link>
+      <Link to={props.link2} target="_blank" className="flex-item">
+        <img src={props.src2} alt=""/>
+      </Link>
+      <Link to={props.link3} target="_blank" className="flex-item">
+        <img src={props.src3} alt=""/>
       </Link>
     </section>
   )
@@ -43,24 +58,24 @@ function WerkIT() {
         <RodeTitel
           naam='KLEINE PROJECTEN'
         />
-        <FlexContainer 
+        <Container2
           link1='/LiefdeApp'
-          imgUrl1={project1}
+          src1={project1}
           link2='/PianoApp'
-          imgUrl2={project2}
+          src2={project2}
           link3='/SimonSpel'
-          imgUrl3={project3}
+          src3={project3}
         />
         <RodeTitel
           naam='WEBDESIGN'
         />
-        <FlexContainer
+        <Container2
           link1={site1}
-          imgUrl1={site1}
+          src1={site1}
           link2={site2}
-          imgUrl2={site2}
+          src2={site2}
           link3={site3}
-          imgUrl3={site3}
+          src3={site3}
         />
       </main>
       <Footer />

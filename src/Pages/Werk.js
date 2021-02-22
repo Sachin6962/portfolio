@@ -11,7 +11,7 @@ import KleineTitel from '../Components/Titels/KleineTitel';
 function Werk() {
   return (
     <div className='werk-keuze-pagina'>
-      <NavLink to='/WerkGrafisch' target="_blank" className='blok1 blok'>
+      <NavLink to='/WerkGrafisch' className='blok1 blok'>
         <img src={design} alt=''/>
         <div className='text-container'>
           <GroteTitel
@@ -22,7 +22,7 @@ function Werk() {
           />
         </div>
       </NavLink>
-      <NavLink to='/WerkIT' target="_blank" className='blok2 blok'>
+      <NavLink to='/WerkIT' className='blok2 blok'>
       <img src={code} alt=''/>
         <div className='text-container'>
         <GroteTitel

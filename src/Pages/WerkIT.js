@@ -13,6 +13,9 @@ import project3 from '../img/it-werk/simon-spel.png';
 import site1 from '../img/it-werk/sport.jpg';
 import site2 from '../img/it-werk/by-dennis.jpg';
 import site3 from '../img/it-werk/sportinstituut.jpg';
+import site4 from '../img/it-werk/letters-stickers.jpg';
+import site5 from '../img/it-werk/rotgans.jpg';
+import site6 from '../img/it-werk/holy-honkbal.jpg';
 
 
 function Container1(props) {
@@ -76,6 +79,14 @@ function WerkIT() {
           src2={site2}
           link3={site3}
           src3={site3}
+        />
+        <Container2
+          link1={site4}
+          src1={site4}
+          link2={site5}
+          src2={site5}
+          link3={site6}
+          src3={site6}
         />
       </main>
       <Footer />

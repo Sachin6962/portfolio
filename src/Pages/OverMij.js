@@ -13,7 +13,6 @@ import illustratie1 from '../img/icoon1.png';
 import illustratie2 from '../img/icoon2.png';
 import illustratie3 from '../img/icoon3.png';
 
-//  mijn leeftijd berekenen
 function berekenLeeftijd() {
   var huidigJaar = new Date().getFullYear();
   var jaar = huidigJaar - 1998;
@@ -36,7 +35,7 @@ function Container1(props) {
       <img src={props.src} alt="foto" className="item1"/>
       <div className="item2">
         <h2><span className="tweede-kleur spacing">{props.titel}</span></h2>
-        <p>Mijn naam is Sachin Kumar, ik ben {berekenLeeftijd()} jaar oud en woon ik Schiedam. 
+        <p>Mijn naam is Sachin Kumar, ik ben {berekenLeeftijd()} jaar oud en woon in Schiedam. 
         Ik ben afgestudeerd als Front-end Web Developer en heb al de diploma Graphic Design op 
         zak. Al sinds mijn jeugd heb ik een groot gevoel voor creativiteit en nauwkeurigheid. 
         Met veel enthousiasme pas ik deze eigenschappen toe in de IT-wereld.</p>
